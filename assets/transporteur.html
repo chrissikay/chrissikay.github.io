@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://semantic-ui.com/examples/homepage.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Standard Meta -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ <!-- W3.CSS-->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!--Using https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Site Properties -->
+  <title>Transporteur werden</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-faces.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/timmi.css">
+
+  <link href="assets/fonts/font-faces.css" rel="stylesheet" type="text/css" />
+  <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/timmi.css" rel="stylesheet" type="text/css" />
+  <script src="assets/jquery-3.2.1.min.js"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
+  <script src="semantic/dist/components/transition.js"></script>
+  <script src="semantic/dist/components/dropdown.js"></script>
+  <script src="semantic/dist/components/visibility.js"></script>
+
+  <script>
+    $(document)
+      .ready(function () {
+
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function () {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function () {
+              $('.fixed.menu').transition('fade out');
+            }
+          });
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item');
+
+      });
+  </script>
+
+  <style>
+    body {
+      background-color: white !important;
+    }
+
+    body {
+      color: rgba(0, 0, 0, .87);
+    }
+
+    p {
+      padding: 10px
+    }
+
+    a {
+      color: rgba(0, 0, 0, .87) !important;
+    }
+
+    a:hover {
+      color: #ededed !important;
+    }
+
+    h1 {
+        font-size: 60px !important;
+        font-weight: normal !important;
+        color: white !important;
+      }
+  
+			h2 {
+      font-weight: normal !important;
+			font-size: 28px !important;
+      text-align: center !important;
+      } 
+
+    	h3 {
+      font-family: GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      font-size: 15px !important;
+      margin-top: 10px !important;
+    }
+
+    .socials {
+      /* . is class */
+      width: 40px
+    }
+
+    #phonenumber {
+      /* # is id */
+      background-color: white;
+    }
+
+    #phonenumber {
+      width: 165px
+    }
+
+    .h1and2 {
+      color: white;
+      background-color: white;
+    }
+
+    .examplestosend {
+      background-color: white;
+      width: 150px
+    }
+
+    .deliveryoptions {
+      background-color: #f1ae55 !important;
+    }
+
+    .deliveryoptions {
+      width: 270px
+    }
+
+    .orangeback {
+      background-color: #f1ae55 !important;
+    }
+
+    .blueback {
+      background-color: #4a89dc !important;
+    }
+
+    .whiteback {
+      background-color: white !important;
+    }
+
+    .timmigradient {
+      background: linear-gradient(90deg, #2aba66 0%, #4a89dc 99%)
+    }
+
+    .button_gradient {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: GothamRoundedLight, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      padding: 7px 7px 7px 7px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      color: black;
+      background-color: #2aba66;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#2aba66), to(#4a89dc));
+      background-image: -webkit-linear-gradient(left, #2aba66, #4a89dc);
+      background-image: -moz-linear-gradient(left, #2aba66, #4a89dc);
+      background-image: -ms-linear-gradient(left, #2aba66, #4a89dc);
+      background-image: -o-linear-gradient(left, #2aba66, #4a89dc);
+      background-image: linear-gradient(to right, #2aba66, #4a89dc);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#2aba66, endColorstr=#4a89dc);
+    }
+
+    .testimonials {
+      max-width: 150px !important;
+    }
+
+    #backpic1 {
+      background: url("assets/TiMMi_Transport_Leipzig.jpeg") no-repeat 50% 70% !important;
+      background-size: cover !important;
+    }
+
+    #backpic2 {
+				background: url("assets/TiMMi-Transport-paketlieferung.png") no-repeat 50% 51% !important;
+		  	background-size: cover !important;
+    }
+
+    #backpic3 {
+				background: url("assets/TiMMi_Transport_Transporteur_werden.jpg") no-repeat 50% 99% !important;
+		  	background-size: cover !important;
+		}
+			
+		#paperripup {
+        background: url("assets/TiMMi-Transport-paperripup2.png") no-repeat 50% 70% !important;
+        background-size: cover !important;
+    }
+			
+		#transparentbackdark {
+        background: url("assets/TiMMi-Transport-box-dunkel.png") no-repeat 50% 70% !important;
+        background-size: cover !important;
+    }
+
+    .footernews {
+        text-align: left !important;
+    }
+
+    .nomargin {
+				 margin-top: 0px !important;
+				 margin-bottom: 0px !important;
+		}
+
+    .mySlidesTest {display:none}
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+
+  </style>
+</head>
+
+
+<!--****************************-->
+<!--***HERE EVERYTHING STARTS***-->
+<!--****************************-->
+
+<body class="pushable">
+
+  <!-- Following Menu
+  <div class="ui large top fixed menu transition hidden">
+    <div class="ui container">
+      <a class="toc item">
+        <i class="sidebar icon"></i>
+      </a>
+      <div class="ui dropdown simple item">
+        <a href="index.html">HOME</a>
+        <i class="icon dropdown"></i>
+        <div class="menu">
+          <a class="item" href="index.html#Lieferung">Lieferung anfragen</a>
+          <a class="item" href="index.html#Referenzen">Referenzen</a>
+          <a class="item" href="index.html#Presse">Presse &amp; Preise</a>
+        </div>
+      </div>
+      <a class="item" href="community.html">Community</a>
+      <a class="item" href="auftraggeber.html">Auftraggeber</a>
+      <div class="ui dropdown simple item">
+        <a href="Transporteur.html">TRANSPORTEURE</a>
+        <i class="icon dropdown"></i>
+        <div class="menu">
+          <a class="item" href="transporteur.html#wie">Transporteur werden</a>
+          <a class="item" href="transporteur.html#explain">Wie es funktioniert</a>
+          <a class="item" href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+          <a class="item" href="transporteur.html#referenzen">Referenzen</a>
+        </div>
+      </div>
+      <a class="active item">Partner</a>
+      <div class="right menu">
+        <div class="item">
+          <a class="ui button">Log in</a>
+        </div>
+        <div class="item">
+          <a class="ui primary button">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical sidebar menu left">
+    <div class="item">
+      <a class="ui logo icon image" href="index.html">
+        <img src="assets/TiMMi_Transport_logo_menu.png">
+      </a>
+      <a href="/">
+        <b> TiMMi Transport</b>
+      </a>
+    </div>
+    <div class="item">
+      <div class="header">
+        <a href="index.html">
+          <b>HOME</b>
+        </a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">
+        <a href="community.html">
+          <b>COMMUNITY</b>
+        </a>
+      </div>
+      <div class="menu">
+        <a class="item" href="community.html#vision">Vision</a>
+        <a class="item" href="community.html#blog">Blog</a>
+        <a class="item" href="community.html#team">Team</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">
+        <a href="auftraggeber.html">
+          <b>AUFTRAGGEBER</b>
+        </a>
+      </div>
+      <div class="menu">
+        <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+        <a class="item" href="auftraggeber.html#explain">Preise</a>
+        <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+        <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+        <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+      </div>
+    </div>
+    <div class="active item">
+      <div class="header">
+        <a href="#">
+          <b>TRANSPORTEURE</b>
+        </a>
+      </div>
+      <div class="menu">
+        <a class="item" href="#wie">Transporteur_in werden</a>
+        <a class="item" href="#explain">Verdienst</a>
+        <a class="item" href="#auftraege">Aktuelle Aufträge</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">
+        <a href="partner.html">
+          <b>PARTNER</b>
+        </a>
+      </div>
+      <div class="menu">
+        <a class="item" href="partner.html#partnerlaeden">Shoppartner</a>
+        <a class="item" href="partner.html#kurierpartner">Kurierpartner</a>
+        <a class="item" href="partner.html#technisches">Technische Einbindung</a>
+        <a class="item" href="partner.html#partnerWerden">Partner werden</a>
+      </div>
+    </div>
+    <a class="item">
+      <font color="#2aba66">EINLOGGEN</a>
+    </font>
+    <a class="item">
+      <font color="#4a89dc">ANMELDEN</a>
+    </font>
+  </div>
+
+  <!-- Page Contents -->
+  <div class="pusher">
+
+    <section class="ui vertical masthead center aligned segment">
+
+      <div class="ui large secondary pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="ui simple item">
+          <a href="index.html">
+            <img class="ui image" src="assets/TiMMi_Transport_logo_menu.png">
+          </a>
+        </div>
+        <div class="ui simple item">
+          <a href="index.html">HOME</a>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="community.html">COMMUNITY</a>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a class="item" href="community.html#vision">Vision</a>
+            <a class="item" href="community.html#blog">Blog</a>
+            <a class="item" href="community.html#team">Team</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="auftraggeber.html">AUFTRAGGEBER</a>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+            <a class="item" href="auftraggeber.html#explain">Preise</a>
+            <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+            <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+            <!--<a class="item"
+                   href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+            <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a class="active simple item" href="#">TRANSPORTEURE</a>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a class="item" href="#wie">Transporteur_in werden</a>
+            <a class="item" href="#explain">Verdienst</a>
+            <a class="item" href="#auftraege">Aktuelle Aufträge</a>
+            <!--<a class="item"
+                   href="transporteur.html#referenzen">Referenzen</a>-->
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="partner.html">PARTNER</a>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="partner.html#partnerlaeden">Shoppartner</a>
+            <a class="item" href="partner.html#kurierpartner">Kurierpartner</a>
+            <a class="item" href="partner.html#technisches">Technische Einbindung</a>
+            <a class="item" href="partner.html#partnerWerden">Partner werden</a>
+            <!--<a class="item"
+                   href="#referenzen">Referenzen</a>-->
+          </div>
+        </div>
+        <div class="right item">
+          <a class="ui teal basic button">EINLOGGEN</a>
+          <a class="ui blue basic button">ANMELDEN</a>
+        </div>
+      </div>
+
+                               <!--Following Menu-->
+                               <div class="ui large secondary top fixed pointing menu transition hidden whiteback">
+                                  <a class="toc item">
+                                    <i class="sidebar icon"></i>
+                                  </a>
+                                  <div class="item">
+                                      <a href="index.html"><img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+                                    </div>
+                                  <div class="ui simple item">
+                                    <a href="index.html">HOME</a>
+                                  </div>
+                                  <div class="ui dropdown simple item">
+                                    <a href="community.html">COMMUNITY</a>
+                                    <i class="icon dropdown"></i>
+                                    <div class="menu">
+                                      <a class="item"
+                                         href="community.html#vision">Vision</a>
+                                      <a class="item"
+                                         href="community.html#blog">Blog</a>
+                                      <a class="item"
+                                         href="community.html#team">Team</a>
+                                    </div>
+                                  </div>
+                                  <div class="ui dropdown simple item">
+                                    <a href="auftraggeber.html">AUFTRAGGEBER</a>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                      <a class="item"
+                                         href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                                      <a class="item"
+                                         href="auftraggeber.html#explain">Preise</a>
+                                      <a class="item"
+                                         href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                                      <a class="item"
+                                         href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                                      <!--<a class="item"
+                                         href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                                      <a class="item"
+                                         href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+                                    </div>
+                                  </div>
+                                  <div class="ui dropdown simple item">
+                                    <a class="active item" href="#">TRANSPORTEURE</a>
+                                    <i class="icon dropdown"></i>
+                                    <div class="menu">
+                                      <a class="item"
+                                         href="#wie">Transporteur_in werden</a>
+                                      <a class="item"
+                                         href="#explain">Verdienst</a>
+                                      <a class="item"
+                                         href="#auftraege">Aktuelle Aufträge</a>
+                                      <!--<a class="item"
+                                         href="transporteur.html#referenzen">Referenzen</a>-->
+                                    </div>
+                                  </div>
+                                  <div class="ui dropdown simple item">
+                                    <a href="partner.html">PARTNER</a>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                      <a class="item"
+                                         href="partner.html#partnerlaeden">Shoppartner</a>
+                                      <a class="item"
+                                         href="partner.html#kurierpartner">Kurierpartner</a>
+                                      <a class="item"
+                                         href="partner.html#technisches">Technische Einbindung</a>
+                                      <a class="item"
+                                         href="partner.html#partnerWerden">Partner werden</a>
+                                      <!--<a class="item"
+                                         href="#referenzen">Referenzen</a>-->
+                                    </div>
+                                  </div>
+                                  <div class="right item">
+                                      <a class="ui teal basic button">EINLOGGEN</a>
+                                      <a class="ui blue basic button">ANMELDEN</a>
+                                    </div>
+                                </div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div id="backpic3">
+    <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+    <div id="transparentbackdark" float="right">
+        <h1>Transporteur werden - so funktioniert's!</h1>
+    </div>
+    <p></p>
+        <div id="paperripup">
+            <p></p><p></p>
+      <!--<div class="ui container">-->
+<div class="whiteback">
+  <div class="ui container"> 
+      <h2>WAS BIST DU?</h2>
+      <p></p>
+          <div class="ui two column stackable grid">
+            <div class="center aligned row">
+              <div class="column">
+                <h2>
+                  <a href="transporteur/timmi-togo.html">TiMMi Privatstrampler</a>
+                </h2>
+                <p>Jeder kann ein TiMMi Transporteur sein! Schau, welche Aufträge zu Deinen Wegen passen und verdien‘ Dir so
+                  mal fix ein paar Euro dazu! Und ganz nebenbei tust Du auch was für die Umwelt. </p>
+                <a class="button_gradient" href="https://www.timmitransport.de/app/join">MITNAHMEGELEGENHEITEN</a>
+              </div>
+              <div class="column">
+                <h2>
+                  <a href="transporteur/pro-timmi.html">TiMMi Profiradler</a>
+                </h2>
+                <p> Gehörst Du zu einem professionellen Radkurierdienst? Dann kannst Du und Deine Firma Teil des TiMMi Netzwerks werden
+                  an und Aufträge erhalten, die euer besonderes Können erfordern!
+                </p>
+                <a class="button_gradient" href="#">INFOS FÜR PROFIS</a>
+              </div>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    
+
+<div class="orangeback">
+    <div id="explain" class="ui container">
+      <p></p>
+      <h2>DU ALS TRANSPORTEUR FÜR MITNAHMEGELEGENHEITEN</h2>
+      <h3>Zusatzverdienst in 3 Schritten...und ein paar Tritten in die Pedalen</h3>
+      <p></p>
+      <div class="ui three column stackable grid">
+        <div class="center aligned row">
+          <div class="column">
+            <div class="ui special cards">
+              <div class="card">
+                <div class="blurring dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted header">Schritt 1</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="assets/TiMMi_Transport_neuer_Auftrag.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">AUF DIE PLÄTZE...</div>
+                  <p>Melde Dich mit E-Mail-Adresse &amp; Handynummber an. TiMMi benachrichtigt Dich,
+                    sobald neue Aufträge in der Nähe sind.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="ui special cards">
+              <div class="card">
+                <div class="blurring dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted header">Schritt 2 &amp; fast fertig!</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="assets/TiMMi_Transport_faire_Bezahlung.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">...FERTIG...</div>
+                  <p>Die Belohnung für TiMMi ToGos bestimmt der Auftraggeber.<br>
+                  TiMMi ToHelp-Aufträge werden meist ehrenamtlich übernommen!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="ui special cards">
+              <div class="card">
+                <div class="blurring dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted header">Schritt 3 &amp; das Geld ist in der Tasche!</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="assets/TiMMi_Transport_schnell_und_flexibel.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">...LOS!</div>
+                  <p>Der Zeitpunkt der Erledigung wird direkt mit dem Auftraggeber abgesprochen. Auf geht's!<br><br></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    
+    <p class="orangeback nomargin"></p>
+    <div class="ui borderless main menu nomargin" id="auftraege">
+      <div class="ui text container">
+        <!--<div href="#" class="header item">
+        <img class="logo" src="assets/logo.png">
+        Project Name
+      </div>-->
+        <a href="Preisinformation.html" class="item">ALLGEMEINE PREISINFORMATION</a>
+        <a href="haeufige-fragen.html" class="item">HÄUFIGE FRAGEN</a>
+        <a href="https://www.timmitransport.de/app/signin" class="item">LOGIN</a>
+        <a href="kontakt.html" class="item">KONTAKT</a>
+        <!--<a href="#" class="ui right floated dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Link Item</div>
+          <div class="item">Link Item</div>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <div class="item">Link Item</div>
+              <div class="item">Link Item</div>
+            </div>
+          </div>
+          <div class="item">Link Item</div>
+        </div>
+      </a>-->
+      </div>
+    </div>
+
+    <!-- <section class="ui vertical stripe quote segment bright">
+      <div class="ui stackable grid">
+        <p>Aktuelle Aufträge erscheinen hier!</p>
+      </div>
+    </section> -->
+
+   <p class="orangeback nomargin"></p> 
+   <div id=backpic2>
+		<p></p>
+		<h2 align=center style="color: white">COMMUNITY-ZÄHLER</h2> 
+    <h3 align=center style="color: white">Jede Tour trägt dazu bei, etwas zu verändern!</h3>
+			<div class="ui equal width stackable internally celled grid">
+				<div class="center aligned row ui statistics">
+					<div class="column">
+						<div class="green statistic">
+							<img class="ui small centered circular image" src="assets/TiMMi_Transport_Paketlieferungen.jpg">
+							<div class="value">302</div>
+							<div class="label" style="color: white; font-size: 18px">Lieferungen getätigt</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="teal statistic">
+							<img class="ui small centered circular image" src="assets/TiMMi_Transport_Kilometer_zurücklegen.jpg">
+							<div class="value">1670</div>
+							<div class="label" style="color: white; font-size: 18px">Kilometer gefahren</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="blue statistic">
+							<img class="ui small centered circular image" src="assets/TiMMi_Transport_CO2_sparen.jpg">
+							<div class="value">76</div>
+							<div class="label" style="color: white; font-size: 18px">Tonnen CO2 gespart</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="violet statistic">
+							<img class="ui small centered circular image" src="assets/TiMMi_Transport_Zeit_sparen.jpg">
+							<div class="value">435</div>
+							<div class="label" style="color: white; font-size: 18px">Stunden Zeit gespart</div>
+						</div>
+					</div>
+				</div>
+			</div>
+      <p></p>
+      <p></p>
+		</div>
+  </div>
+
+
+  <center class="whiteback">
+    <p></p>
+    <p></p>
+    <h2>USER STORIES</h2>
+    <p></p>
+  </center>
+  <center class="whiteback">
+  <div>
+<div class="w3-content w3-display-container">
+  
+  <div class="mySlidesTest">
+      <div>
+        <img class="ui small bordered circular image" src="assets/TiMMi_Transport_Referenz_Andreas_Dohrn.png">
+        <h3>Pfarrer Andreas Dohrn, Kontaktstelle Wohnen</h3>
+        <p>"TiMMi ist ein sehr wirksames Startup. Mir gefällt, dass bei den Transporten sowohl auf die CO2-Reduktion als auch auf den sozialen Aspekt, beispielsweise bei den Umzügen für Geflüchtete, geachtet wird. Wenn ihr das TiMMi-Team persönlich kennenlernt, werdet ihr schnell feststellen, dass Christina, Sandra und die Programmierer ein sehr innovatives und starkes Team sind."</p>
+      </div>
+  </div>
+
+  <div class="mySlidesTest">
+      <div>
+        <img class="ui small bordered circular image" src="assets/TiMMi_Transport_Referenz_Marcus_Bittner.png">
+        <h3>Marcus Bittner, Social Impact Lab Leipzig</h3>
+        <p>"TiMMi entwickelt ein lokales Logistiksystem, das nachhaltigen Konsum und regionale Wertschöpfung stärkt - ein wirklich innovativer Ansatz in der sharing economy."</p>
+      </div>
+  </div>  
+
+  <div class="mySlidesTest">
+      <div>
+        <img class="ui small bordered circular image" src="assets/TiMMi_Transport_Referenz_Graebel_Sachspendenzentrale.png">
+        <h3>Christoph Graebel, Sachspendenzentrale Leipzig</h3>
+        <p>"TiMMi hilft maßgeblich dabei, dass Sachspenden die Sachspendenzentrale Leipzig erreichen - wenn das nicht so wäre, könnten wir keine Sachspenden bedarfsgerecht ausgeben. D.h. ohne ehrenamtliche Transportdienstleistungen wäre die Sachspendenzentrale nicht arbeitsfähig. Für den großartigen Support bisher und in Zukunft: ein dreifaches Danke und jede Menge Karmapunkte für TiMMi und alle, die da mitmachen."</p>
+      </div>
+  </div>
+  
+  <p></p>
+  <p></p>
+
+  <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo-test w3-border w3-transparent w3-hover-black" onclick="currentDivTest(1)"></span>
+    <span class="w3-badge demo-test w3-border w3-transparent w3-hover-black" onclick="currentDivTest(2)"></span>
+    <span class="w3-badge demo-test w3-border w3-transparent w3-hover-black" onclick="currentDivTest(3)"></span>
+  </div>
+</div>
+</div>
+<p></p>
+</center>
+
+<!--    <div class="ui container">
+      <p></p>
+      <h2>Kundenstimmen</h2>
+    </div>
+
+    <div class="ui vertical stripe quote segment">
+      <div class="ui three column stackable grid">
+        <div class="center aligned row">
+          <div class="column">
+            <p>Ich habe mehr Zeit für die Kundenakquise dank TiMMi!
+              <img src="assets/elliot.jpg" class="ui avatar image">
+              <b>Georg</b> ImNu Kurierkollektiv
+            </p>
+          </div>
+          <div class="column">
+            <p>Ich spare Zeit mit meinen Abrechnungen und habe somit einen höheren Stundenlohn!
+              <img src="assets/helen.jpg" class="ui avatar image">
+              <b>Victoria</b> Pro TiMMi
+            </p>
+          </div>
+          <div class="column">
+            <p>Ich verdiene ein paar Euro dazu auf meinen tagtäglichen Wegen!
+              <img src="assets/jenny.jpg" class="ui avatar image">
+              <b>Jenny</b>TiMMi Transporteur
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  <!-- Footer -->
+
+    <div class="timmigradient">
+      <div class="ui vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable divided equal height stackable grid">
+            <div class="four wide center aligned column">
+              <h4 class="ui header">KONTAKT</h4>
+              <div>
+                <p>Dittrichring 15 | Zi. 209
+                  <br> 04109 Leipzig</p>
+                <p>Festnetz: 0341/69769824
+                  <br> Mobil: 0171/4167719
+                  <br> E-Mail: info@timmi.io</p>
+              </div>
+            </div>
+            <div class="three wide center aligned column">
+              <h4 class="ui header">SONSTIGES</h4>
+              <div class="ui link list">
+                <p>
+                  <a href="haeufige-fragen.html" class="item">FAQ</a>
+                  <br>
+                  <a href="Preisinformation.html" class="item">Preise</a>
+                  <br>
+                  <a href="https://drive.google.com/drive/folders/0B7MIe7ej3uI1Tm1Zc0ZTQXBsTkE?usp=sharing" class="item">Pressematerial</a>
+                </p>
+              </div>
+              <h4 class="ui header">RECHTLICHES</h4>
+              <div class="ui link list">
+                <p>
+                  <a href="AGB.html" class="item">AGB</a>
+                  <br>
+                  <a href="Datenschutz.html" class="item">Datenschutz</a>
+                  <br>
+                  <a href="Impressum.html" class="item">Impressum</a>
+                </p>
+              </div>
+            </div>
+            <div class="six wide center aligned column">
+
+              <!-- NEWSLETTER INTEGRATION BEGIN -->
+              <!-- Begin MailChimp Signup Form -->
+
+              <div id="mc_embed_signup">
+                <form action="https://timmitransport.us15.list-manage.com/subscribe/post?u=bf47aaeec129c0d21eef5d5f4&amp;id=eed250fcef" method="post"
+                  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                    <h4>SEI TEIL DER BEWEGUNG! WIR INFORMIEREN DICH KURZ &amp; KNAPP ÜBER AKTUELLE EREIGNISSE.</h4>
+
+
+                    <div class="mc-field-group ui form">
+
+                      <div class="inline field">
+                        <label for="mce-EMAIL">E-Mail-Adresse
+                          <span class="asterisk">*</span>
+                        </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                      </div>
+
+                    </div>
+
+                    <br>
+                    <div class="mc-field-group input-group footernews">
+                      <div class="ui checkbox">
+                        <input type="checkbox" value="2" name="group[3487][2]" id="mce-group[3487]-3487-0">
+                        <label for="mce-group[3487]-3487-0"> Community-Newsletter</label>
+                      </div>
+                      <br>
+                      <div class="ui checkbox">
+                        <input type="checkbox" value="4" name="group[3487][4]" id="mce-group[3487]-3487-1">
+                        <label for="mce-group[3487]-3487-1"> Partner-Newsletter</label>
+                      </div>
+                      <br>
+                      <div class="ui checkbox">
+                        <input type="checkbox" value="8" name="group[3487][8]" id="mce-group[3487]-3487-2">
+                        <label for="mce-group[3487]-3487-2"> Presseverteiler</label>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_bf47aaeec129c0d21eef5d5f4_eed250fcef" tabindex="-1" value="">
+                    </div>
+                    <div class="clear">
+                      <input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="ui black button">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+              <script type='text/javascript'>(function ($) {
+                window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; /*
+   * Translated default messages for the $ validation plugin.
+   * Locale: DE
+   */
+                  $.extend($.validator.messages, {
+                    required: "Dieses Feld ist ein Pflichtfeld.",
+                    maxlength: $.validator.format("Geben Sie bitte maximal {0} Zeichen ein."),
+                    minlength: $.validator.format("Geben Sie bitte mindestens {0} Zeichen ein."),
+                    rangelength: $.validator.format("Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein."),
+                    email: "Geben Sie bitte eine gültige E-Mail Adresse ein.",
+                    url: "Geben Sie bitte eine gültige URL ein.",
+                    date: "Bitte geben Sie ein gültiges Datum ein.",
+                    number: "Geben Sie bitte eine Nummer ein.",
+                    digits: "Geben Sie bitte nur Ziffern ein.",
+                    equalTo: "Bitte denselben Wert wiederholen.",
+                    range: $.validator.format("Geben Sie bitten einen Wert zwischen {0} und {1}."),
+                    max: $.validator.format("Geben Sie bitte einen Wert kleiner oder gleich {0} ein."),
+                    min: $.validator.format("Geben Sie bitte einen Wert größer oder gleich {0} ein."),
+                    creditcard: "Geben Sie bitte eine gültige Kreditkarten-Nummer ein."
+                  });
+                }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+              <!--End mc_embed_signup-->
+              <!-- NEWSLETTER INTEGRATION END -->
+
+            </div>
+            <div class="three wide center aligned column">
+              <a href="https://www.facebook.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Facebook.png" alt="Link zu Facebook" align="center"></a> 
+                            <a href="https://www.facebook.com/timbestellbot/"><img class="socials" src="assets/TiMMi-Transport-Facebook-Messenger-Icon.png" alt="Link zu Facebook" align="center"></a>
+                            <a href="https://www.instagram.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Instagram.png" alt="Link zu Instagram" align="center"></a>
+                            <a href="https://plus.google.com/+TiMMiTransportLeipzig"><img class="socials" src="assets/TiMMi-Transport-Icon-Google-Plus.png" alt="Link zu Google Plus" align="center"></a>
+                            <p></p>
+                            <p></p>
+                            <p></p>           
+                            <img src="assets/TiMMi-Transport-Logo2.png" alt="Logo von TiMMi Transport" width="90" align="center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+// slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+ ;
+
+ var slideIndexTest = 1;
+showDivsTest(slideIndexTest);
+
+function plusDivsTest(n) {
+  showDivsTest(slideIndexTest += n);
+}
+
+function currentDivTest(n) {
+  showDivsTest(slideIndexTest = n);
+}
+
+function showDivsTest(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlidesTest");
+  var dots = document.getElementsByClassName("demo-test");
+  if (n > x.length) {slideIndexTest = 1}    
+  if (n < 1) {slideIndexTest = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-black", "");
+  }
+  x[slideIndexTest-1].style.display = "block";  
+  dots[slideIndexTest-1].className += " w3-black";
+}
+
+ // When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+;
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0046)https://semantic-ui.com/examples/homepage.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- CK first attempt at the favicon... takes forever to load.. second option below... not sure which is better?..
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="favicons/apple-icon-167x167.png">  
+    <link rel="apple-touch-icon-precomposed" href="favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="shortcut icon" sizes="196x196" href="favicons/favicon-196.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f0f0f0">-->
+
+    <!--Using https://realfavicongenerator.net -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff"> 
+  
+
+    <!-- Site Properties -->
+    <title>Häufige Fragen</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-faces.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/timmi.css">
+
+    <!--<script src="assets/jquery-3.1.1.min.js"></script>-->
+
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="semantic/dist/components/transition.js"></script>
+    <script src="semantic/dist/components/dropdown.js"></script>
+    <script src="semantic/dist/components/visibility.js"></script>
+
+    <script>
+        $(document)
+            .ready(function() {
+
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function() {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function() {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item');
+
+            });
+    </script>
+
+     <!--This link is for the mailchimp newsletter integration in the footer
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
+
+  
+  <style>
+      body {
+        background-color: white !important;
+      } 
+    
+        body {
+          color: rgba(0,0,0,.87);
+        } 
+      
+        p {
+           padding: 10px
+        }
+    
+        a {
+          color: rgba(0,0,0,.87) !important;
+        }
+        
+        a:hover {
+          color: #ededed !important;
+        }  
+
+        h1 {
+        font-size: 60px !important;
+        font-weight: normal !important;
+        color: black !important;
+      }
+  
+			h2 {
+      font-weight: normal !important;
+			font-size: 28px !important;
+      text-align: center !important;
+      } 
+
+    	h3 {
+      font-family: GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      font-size: 15px !important;
+      margin-top: 10px !important;
+    }
+    
+        .socials {     /* . is class */
+          width: 40px
+        }
+    
+        #phonenumber  {      /* # is id */
+          background-color: white;
+        }
+    
+        #phonenumber  {
+          width: 165px
+        }
+    
+        .h1and2 {
+          color: white;
+          background-color: white;
+        }
+        
+        .examplestosend {
+          background-color: white;
+          width: 150px
+        }
+    
+        .deliveryoptions {
+          background-color: #f1ae55 !important;
+        }
+    
+        .deliveryoptions {
+          width: 270px
+        }
+    
+        .orangeback {
+          background-color: #f1ae55 !important;
+        }  
+    
+        .blueback {
+          background-color: #4a89dc !important;
+        }
+    
+        .whiteback {
+          background-color: white !important;
+        }
+    
+        .timmigradient {
+          background: linear-gradient(90deg, #2aba66 0%, #4a89dc 99%)
+        }
+    
+        .button_gradient {
+    -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:14px;font-family:GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif; padding: 7px 7px 7px 7px; text-decoration:none; display:inline-block;font-weight:bold; color: black;
+     background-color: #2aba66; background-image: -webkit-gradient(linear, left top, left bottom, from(#2aba66), to(#4a89dc));
+     background-image: -webkit-linear-gradient(left, #2aba66, #4a89dc);
+     background-image: -moz-linear-gradient(left, #2aba66, #4a89dc);
+     background-image: -ms-linear-gradient(left, #2aba66, #4a89dc);
+     background-image: -o-linear-gradient(left, #2aba66, #4a89dc);
+     background-image: linear-gradient(to right, #2aba66, #4a89dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2aba66, endColorstr=#4a89dc);
+        }
+    
+        .testimonials {
+          max-width: 150px !important;
+        }
+    
+        #backpic1 {
+          background: url("assets/TiMMi_Transport_Leipzig.jpeg") no-repeat 50% 70% !important;
+          background-size: cover !important;
+        }
+    
+        .footernews {
+          text-align: left !important;
+        }
+    
+    
+    
+      </style>
+</head>
+
+
+<!--****************************-->
+<!--***HERE EVERYTHING STARTS***-->
+<!--****************************-->
+
+<body class="pushable">
+
+    <!-- Following Menu
+    <div class="ui large top fixed pointing menu transition hidden">
+      <div class="ui container">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="ui simple item">
+          <a href="index.html">HOME</a>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="community.html">COMMUNITY</a>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a class="item"
+               href="community.html#vision">Vision</a>
+            <a class="item"
+               href="community.html#blog">Blog</a>
+            <a class="item"
+               href="community.html#team">Team</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="auftraggeber.html">AUFTRAGGEBER</a>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item"
+               href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+            <a class="item"
+               href="auftraggeber.html#explain">Preise</a>
+            <a class="item"
+               href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+            <a class="item"
+               href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+            <a class="item"
+               href="auftraggeber.html#kanaele">Bestellkanäle</a>
+            <a class="item"
+               href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="Transporteur.html">TRANSPORTEURE</a>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a class="item"
+               href="transporteur.html#wie">Transporteur_in werden</a>
+            <a class="item"
+               href="transporteur.html#explain">Verdienst</a>
+            <a class="item"
+               href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+            <a class="item"
+               href="transporteur.html#referenzen">Referenzen</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="partner.html">PARTNER</a>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item"
+               href="partner.html#partnerlaeden">Shoppartner</a>
+            <a class="item"
+               href="partner.html#kurierpartner">Kurierpartner</a>
+            <a class="item"
+               href="partner.html#technisches">Technische Einbindung</a>
+            <a class="item"
+               href="partner.html#partnerWerden">Partner werden</a>
+            <a class="item"
+               href="#referenzen">Referenzen</a>
+          </div>
+        </div>
+        <div class="right menu">
+          <div class="item">
+            <a class="ui button">EINLOGGEN</a>
+          </div>
+          <div class="item">
+            <a class="ui primary button">ANMELDEN</a>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+ <!-- Sidebar Menu -->
+ <div class="ui vertical sidebar menu left">
+    <div class="item">
+      <a class="ui logo icon image" href="index.html">
+      <img src="assets/TiMMi_Transport_logo_menu.png">
+      </a>
+      <a href="/"><b>   TiMMi Transport</b></a>
+    </div>
+    <div class="item">
+      <div class="header">
+       <a href="index.html"><b>HOME</b></a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">
+      <a href="community.html"><b>COMMUNITY</b></a>
+      </div>
+      <div class="menu">
+        <a class="item" href="community.html#vision">Vision</a>
+        <a class="item" href="community.html#blog">Blog</a>
+        <a class="item" href="community.html#team">Team</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">
+      <a href="auftraggeber.html"><b>AUFTRAGGEBER</b></a>
+      </div>
+      <div class="menu">
+          <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+          <a class="item" href="auftraggeber.html#explain">Preise</a>
+          <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+          <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+          <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+      </div>
+    </div>
+    <div class="item">
+        <div class="header">
+        <a href="TRANSPORTEUR.html"><b>TRANSPORTEURE</b></a>
+        </div>
+        <div class="menu">
+            <a class="item" href="transporteur.html#wie">Transporteur_in werden</a>
+            <a class="item" href="transporteur.html#explain">Verdienst</a>
+            <a class="item" href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header">
+        <a href="partner.html"><b>PARTNER</b></a>
+        </div>
+        <div class="menu">
+            <a class="item" href="partner.html#partnerlaeden">Shoppartner</a>
+            <a class="item" href="partner.html#kurierpartner">Kurierpartner</a>
+            <a class="item" href="partner.html#technisches">Technische Einbindung</a>
+            <a class="item" href="partner.html#partnerWerden">Partner werden</a>
+        </div>
+    </div>
+    <a class="item"><font color="#2aba66">EINLOGGEN</a></font>
+    <a class="item"><font color="#4a89dc">ANMELDEN</a></font>
+  </div>
+
+
+    <!-- Page Contents -->
+    <div class="pusher">
+
+      <!-- Top Menu -->
+      <section class="ui vertical masthead center aligned segment">
+
+            <div class="ui large secondary pointing menu">
+              <a class="toc item">
+                <i class="sidebar icon"></i>
+              </a>
+              <div class="ui simple item">
+                  <a href="index.html"> <img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+                </div>
+              <div class="ui simple item">
+                <a href="index.html">HOME</a>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="community.html">COMMUNITY</a>
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="community.html#vision">Vision</a>
+                  <a class="item"
+                     href="community.html#blog">Blog</a>
+                  <a class="item"
+                     href="community.html#team">Team</a>
+                </div>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="auftraggeber.html">AUFTRAGGEBER</a>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                  <a class="item"
+                     href="auftraggeber.html#explain">Preise</a>
+                  <a class="item"
+                     href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                  <a class="item"
+                     href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                  <!--<a class="item"
+                     href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                  <a class="item"
+                     href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+                </div>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="Transporteur.html">TRANSPORTEURE</a>
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="transporteur.html#wie">Transporteur_in werden</a>
+                  <a class="item"
+                     href="transporteur.html#explain">Verdienst</a>
+                  <a class="item"
+                     href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                  <!--<a class="item"
+                     href="transporteur.html#referenzen">Referenzen</a>-->
+                </div>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="partner.html">PARTNER</a>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="partner.html#partnerlaeden">Shoppartner</a>
+                  <a class="item"
+                     href="partner.html#kurierpartner">Kurierpartner</a>
+                  <a class="item"
+                     href="partner.html#technisches">Technische Einbindung</a>
+                  <a class="item"
+                     href="partner.html#partnerWerden">Partner werden</a>
+                  <!--<a class="item"
+                     href="#referenzen">Referenzen</a>-->
+                </div>
+              </div>
+              <div class="right item">
+                <a class="ui teal basic button">EINLOGGEN</a>
+                <a class="ui blue basic button">ANMELDEN</a>
+              </div>
+            </div>
+    
+     <!--Following Menu-->
+ <div class="ui large secondary top fixed pointing menu transition hidden whiteback">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <div class="item">
+        <a href="index.html"><img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+      </div>
+    <div class="ui simple item">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="community.html">COMMUNITY</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="community.html#vision">Vision</a>
+        <a class="item"
+           href="community.html#blog">Blog</a>
+        <a class="item"
+           href="community.html#team">Team</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="auftraggeber.html">AUFTRAGGEBER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+        <a class="item"
+           href="auftraggeber.html#explain">Preise</a>
+        <a class="item"
+           href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+        <a class="item"
+           href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+        <!--<a class="item"
+           href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+        <a class="item"
+           href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="Transporteur.html">TRANSPORTEURE</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="transporteur.html#wie">Transporteur_in werden</a>
+        <a class="item"
+           href="transporteur.html#explain">Verdienst</a>
+        <a class="item"
+           href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+        <!--<a class="item"
+           href="transporteur.html#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="partner.html">PARTNER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="partner.html#partnerlaeden">Shoppartner</a>
+        <a class="item"
+           href="partner.html#kurierpartner">Kurierpartner</a>
+        <a class="item"
+           href="partner.html#technisches">Technische Einbindung</a>
+        <a class="item"
+           href="partner.html#partnerWerden">Partner werden</a>
+        <!--<a class="item"
+           href="#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="right item">
+        <a class="ui teal basic button">EINLOGGEN</a>
+        <a class="ui blue basic button">ANMELDEN</a>
+      </div>
+  </div>
+        
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+          <div>
+              <p></p>
+              <h1>Häufige Fragen</h1>
+              <p></p>
+              <p ui text inverted>Wähle bitte, zu welcher Kategorie Deine Frage passt:</p>
+              <p></p>
+            </div>
+        
+
+  
+<div class="ui container">
+  <div class="ui six column stackable grid">
+      <div class="center aligned row">
+        <div class="column">
+          <div class="ui card">
+              <a href="haeufige-fragen-auftraggeber.html#unternehmen">
+              <div class="ui image">
+                  <img src="assets/TiMMi_Transport_FAQ_Unternehmen.png">
+              </div>
+            <div class="content blueback">
+              <div class="header">
+                 UNTERNEHMEN
+              </div>
+              <div class="description">
+                  mit Lieferungsbedarf, egal ob groß oder klein
+              </div>
+            </div>
+            </a>
+          </div>
+          </div>
+          <div class="column">
+            <div class="ui card">
+                <a href="haeufige-fragen-auftraggeber.html#privat">
+              <div class="ui image">
+                  <img src="assets/TiMMi_Transport_FAQ_Auftraggeber.png">
+              </div>
+            <div class="content blueback">
+              <div class="header">
+                 PRIVATE AUFTRAGGEBER,
+              </div>
+              <div class="description">
+                die etwas erledigen lassen wollen 
+              </div>
+            </div>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+              <div class="ui card">
+                <a href="haeufige-fragen-transporteur.html#timmitogo">
+                  <div class="ui image">
+                      <img src="assets/TiMMi_Transport_FAQ_Transporteur.png">
+                  </div>
+                <div class="content blueback">
+                  <div class="header">
+                     PRIVATE TRANSPORTEURE,
+                  </div>
+                  <div class="description">
+                      die Platz im Rucksack oder Kofferraum haben
+                  </div>
+                </div>
+              </a>
+              </div>
+              </div>
+              <div class="column">
+                  <div class="ui card">
+                      <a href="haeufige-fragen-transporteur.html#profi">
+                      <div class="ui image">
+                          <img src="assets/TiMMi_Transport_FAQ_Kurier.png">
+                      </div>
+                    <div class="content blueback">
+                      <div class="header">
+                         PROFI-KURIERE
+                      </div>
+                      <div class="description">
+                          Kollektiv, Selbstständige oder Unternehmen
+                      </div>
+                    </div>
+                  </a>
+                  </div>
+                  </div>
+                  <div class="column">
+                      <div class="ui card">
+                          <a href="#generalQ">
+                          <div class="ui image">
+                              <img src="assets/TiMMi_Transport_FAQ_Allgemeines.png">
+                          </div>
+                        <div class="content orangeback">
+                          <div class="header">
+                             ALLGEMEINES
+                          </div>
+                          <div class="description">
+                              Wie verändert diese Webseite die Welt?
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="column">
+                          <div class="ui card">
+                              <a href="haeufige-fragen-auftraggeber.html#wohltaetig">
+                              <div class="ui image">
+                                <img src="assets/TiMMi_Transport_FAQ_Hilfsorganisation.png">
+                              </div>
+                            <div class="content blueback">
+                              <div class="header">
+                                 HILFSORGANISATION
+                              </div>
+                              <div class="description">
+                                  mit Unterstützungsbedarf beim Transport
+                              </div>
+                            </div>
+                          </a>
+                          </div>
+                          </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<div id="generalQ" class="ui hidden divider"></div>
+
+<div class="ui container">
+    <div class="demo">
+    <div class="example">
+    <div class="ui accordion">
+      <div class="ui header title">
+        <i class="dropdown icon"></i>
+        Wer ist dieser TiMMi überhaupt? 
+      </div>
+      <div class="content">
+        <p>TiMMi Transport ist eine Community aus Privatpersonen, Unternehmen und Hilfsorganisationen, formell bestehend aus der TiMMi Transport GmbH und dem <a href="http://www.timmitohelp.de">TiMMi ToHelp e. V.</a>. Umweltbewusstsein, Fairness und die Herausforderung, ein „gutes Unternehmen“ aufzubauen, das weder Mensch noch Natur ausbeutet und für alle Stakeholder positive Effekte erzeugt, ist der Antrieb unseres Start-ups. Lies mehr dazu in unserer <a href="community.html#vision">Vision</a>. TiMMis nennen wir einfach jeden in der Community ;) Aber wieso denn nun TiMMi? Ein wirres Akronym aus den Vornamen der Ideengeberinnen!</p>
+      </div>
+      <div class="ui header title">
+        <i class="dropdown icon"></i>
+        Welche Dienste bietet mir TiMMi?
+      </div>
+      <div class="content">
+        <p>TiMMi bietet umweltfreundliche und faire innerstädtische Transportlösungen über ein Netzwerk an professionellen Radkurieren und privaten Mitnahmegelegenheiten.</p> 
+        <p>Gib private oder geschäftliche Lieferungen in Auftrag, verwende TiMMi als fairen und umweltfreundlichen Vertriebsweg für Deinen Onlineshop oder physischen Laden, oder sei selbst ein_e Profi- oder Hobby-Transporteur_in!</p>
+        <p>Du kannst zwischen vier Lieferkategorien wählen:<br>
+            a.	EXPRESS: Professionelle Lieferung vom Radkurier innerhalb von 30min.<br>
+            b.	STANDARD: Professionelle Lieferung vom Radkurier innerhalb von 2h.<br>
+            c.	MITNAHMEGELEGENHEIT: Finde Leute auf der Plattform, die auf ihren Wegen Deine Transporte übernehmen können. <br>
+            d.	WOHLTÄTIGE TRANSPORTE: Finde Leute auf der Plattform, die ehrenamtlich Spendentransporte übernehmen oder bei Umzügen von Hilfebedürftigen mit anpacken können.
+            </p>
+      </div>
+      <div class="ui header title">
+          <i class="dropdown icon"></i>
+          Wie sind die Sendungen, die mit TiMMi unterwegs sind, versichert?
+        </div>
+        <div class="content">
+          <p>Wählst Du Lieferungen per Fahrradkurier, gelten immer die üblichen Versicherungen der jeweiligen <a href="kurierfirmen.html">Partner</a> (üblicherweise bis X€ einschl. Schadensersatz). 
+              Lieferungen per Mitnahmegelegenheit sind gegen Bruch und Verlust beim Transport bis zu 1000€ versichert.</p>
+        </div>
+        <div class="ui header title">
+            <i class="dropdown icon"></i>
+            Welche Sachen können mit TiMMi transportiert werden?
+          </div>
+          <div class="content">
+            <p>Vom eiligen Dokument über Blumen und Werbeflyer bis hin zu vergessenen Schlüsseln oder Anzügen – Radkuriere nehmen alles mit, was in den Kurierrucksack oder auf ein Cargobike passt, um Deinen häuslichen oder Büroalltag zu erleichtern. In einigen Städten stehen zudem eAutos und eTransporter zur Verfügung, schau dafür bei unseren jeweiligen <a href="kurierfirmen.html">Partnern</a> nach. Auch unsere Mitnahmegelegenheiten haben schon die kuriosesten Dinge mitgenommen. <a href="auftraggeber.html#nutzung">Inspiration</a> gefällig? Gefährliche und illegale Dinge sind selbstredend verboten, siehe den <a href="agb.html">AGB</a>.</p>
+          </div>
+          <div class="ui header title">
+              <i class="dropdown icon"></i>
+              Wo ist TiMMi aktiv?
+            </div>
+            <div class="content">
+              <p>Das Netzwerk der Radkuriere ist deutschlandweit aktiv. Sieh in unserer <a href="kurierfirmen.html">Partnerliste</a> nach, ob Deine Stadt auch schon dabei ist. </p>
+
+              <p>Die Plattform für Mitnahmegelegenheiten ist für jede Adresse auf dieser Welt anwendbar – als Leipziger Start-up ist die Community erstmal besonders hier aktiv. An den Rest der Welt: Wir kommen!! <a href="kontakt.html">Kontaktiere</a> uns, wenn Du helfen möchtest, die TiMMi-Bewegung auch in Deine Stadt zu holen. Du bist Teil der Community, also ist TiMMi überall, wo Du bist.</p>
+            </div>
+          <div class="ui header title">
+                <i class="dropdown icon"></i>
+                Was kostet TiMMi?
+              </div>
+              <div class="content">
+                <p>Du hast die Möglichkeit, entweder professionelle Kuriere zu beauftragen oder bei Aufträgen, die es weniger eilig haben, die Community der Mitnahmegelegenheit zu nutzen. Die Kurierpreise für EXPRESS und STANDARD variieren je nach Stadt bzw. <a href="kurierfirmen.html">Kurierpartner</a>.</p>
+                <p>Bei Mitnahmegelegenheiten kannst Du grundsätzlich selbst entscheiden, wie viel Du zahlen möchtest und kannst. Bei Deiner Auftragserstellung geben wir Dir einen Richtwert, falls Du gar nicht weißt, welche Belohnung Du anbieten sollst. Gebühren für die Plattform fallen übrigens nicht an.</p> 
+                <p>Wohltätige Transporte werden, wie erwartet, ehrenamtlich übernommen oder je nach individueller Absprache mit einem Stück Kuchen.</p>
+              </div>
+            <div class="ui header title">
+                <i class="dropdown icon"></i>
+                Wie kann ich Mitglied der TiMMi Community werden?
+              </div>
+              <div class="content">
+                <p>Du kannst sowohl als Auftraggeber, Transporteur oder auch als Botschafter aktiv sein, in jedem Fall trägst Du zur Schonung der Umwelt und zur Förderung von fairen Arbeitsbedingungen im Lieferdienstsektor bei. Like uns auf <a href="https://www.facebook.com/timmitransport">Facebook</a>, folge uns auf <a href="https://www.instagram.com/timmitransport/">Instagram</a> oder schreib Dich in unseren <a href="#newsletter">Newsletter</a> ein, um mit aktuellen Infos versorgt zu werden. Werde Teil der Bewegung und schließ Dich an, bring Dich ein, ganz nach Deinem Geschmack, still und beobachtend oder laut und mit Fähnchen.</p>
+                <p><i class="arrow circle right icon"></i>Bist Du an TiMMi als <a href="partner.html#partnerWerden">Vertriebsweg und Versandoption für Dein Geschäft</a> interessiert, kontaktiere uns gern direkt um alle interessanten Infos zu erhalten.
+                <p><i class="arrow circle right icon"></i>Möchtest Du das Netzwerk an Helfern nutzen oder selbst Helfer werden? Beim <a href="http://www.timmitohelp.de">Verein TiMMi ToHelp</a> können wir Dir weiterhelfen!</p>
+              </div>
+              <div class="ui header title">
+                  <i class="dropdown icon"></i>
+                  Wo ist TiMMi aktiv?
+                </div>
+                <div class="content">
+                  <p>No problemo, ruf uns jederzeit gern an oder schreib, wir freuen uns!</p><br>
+                  Festnetz: 0341/69769824<br>
+                  Mobil: 0171/4167719<br>
+                  E-Mail: info@timmi.io</p>
+                </div>
+    </div>
+</div>
+<script type="text/javascript">
+  $(document)
+    .ready(function(){
+      $('.demo .example .ui.accordion')
+        .accordion()
+      ;
+    })
+  ;
+  </script>
+</div>
+</div>
+
+<div id="#newsletter" class="ui horizontal divider">
+    <i class="heart icon"></i>
+</div>
+
+<div class="timmigradient">
+    <div class="ui vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable divided equal height stackable grid">
+          <div class="four wide center aligned column">
+            <h4 class="ui header">KONTAKT</h4>
+            <div>
+             <p>Dittrichring 15 | Zi. 209<br>
+                04109 Leipzig</p>
+             <p>Festnetz: 0341/69769824<br>
+                Mobil: 0171/4167719<br>
+                E-Mail: info@timmi.io</p>
+            </div>
+          </div>
+          <div class="three wide center aligned column">
+            <h4 class="ui header">SONSTIGES</h4>
+            <div class="ui link list">
+              <p><a href="haeufige-fragen.html" class="item">FAQ</a><br>
+              <a href="Preisinformation.html" class="item">Preise</a><br>
+              <a href="https://drive.google.com/drive/folders/0B7MIe7ej3uI1Tm1Zc0ZTQXBsTkE?usp=sharing" class="item">Pressematerial</a></p>
+            </div>
+             <h4 class="ui header">RECHTLICHES</h4>
+            <div class="ui link list">
+              <p><a href="AGB.html" class="item">AGB</a><br>
+              <a href="Datenschutz.html" class="item">Datenschutz</a><br>
+              <a href="Impressum.html" class="item">Impressum</a></p>
+            </div>
+          </div>
+          <div class="six wide center aligned column">
+  
+  <!-- NEWSLETTER INTEGRATION BEGIN -->
+  <!-- Begin MailChimp Signup Form -->
+  
+  <div id="mc_embed_signup">
+  <form action="https://timmitransport.us15.list-manage.com/subscribe/post?u=bf47aaeec129c0d21eef5d5f4&amp;id=eed250fcef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    <h4>SEI TEIL DER BEWEGUNG! WIR INFORMIEREN DICH KURZ &amp; KNAPP ÜBER AKTUELLE EREIGNISSE.</h4>
+  
+  
+  <div class="mc-field-group ui form">
+    
+     <div class="inline field">
+     <label for="mce-EMAIL">E-Mail-Adresse<span class="asterisk">*</span>
+     </label>
+     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+     </div>
+    
+  </div>
+  
+  <br>
+  <div class="mc-field-group input-group footernews">
+      <div class="ui checkbox"><input type="checkbox" value="2" name="group[3487][2]" id="mce-group[3487]-3487-0"><label for="mce-group[3487]-3487-0"> Community-Newsletter</label></div><br>
+      <div class="ui checkbox"><input type="checkbox" value="4" name="group[3487][4]" id="mce-group[3487]-3487-1"><label for="mce-group[3487]-3487-1"> Partner-Newsletter</label></div><br>
+      <div class="ui checkbox"><input type="checkbox" value="8" name="group[3487][8]" id="mce-group[3487]-3487-2"><label for="mce-group[3487]-3487-2"> Presseverteiler</label></div>
+  </div>
+  <br>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bf47aaeec129c0d21eef5d5f4_eed250fcef" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="ui black button"></div>
+      </div>
+  </form>
+  </div>
+  <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
+   * Translated default messages for the $ validation plugin.
+   * Locale: DE
+   */
+  $.extend($.validator.messages, {
+    required: "Dieses Feld ist ein Pflichtfeld.",
+    maxlength: $.validator.format("Geben Sie bitte maximal {0} Zeichen ein."),
+    minlength: $.validator.format("Geben Sie bitte mindestens {0} Zeichen ein."),
+    rangelength: $.validator.format("Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein."),
+    email: "Geben Sie bitte eine gültige E-Mail Adresse ein.",
+    url: "Geben Sie bitte eine gültige URL ein.",
+    date: "Bitte geben Sie ein gültiges Datum ein.",
+    number: "Geben Sie bitte eine Nummer ein.",
+    digits: "Geben Sie bitte nur Ziffern ein.",
+    equalTo: "Bitte denselben Wert wiederholen.",
+    range: $.validator.format("Geben Sie bitten einen Wert zwischen {0} und {1}."),
+    max: $.validator.format("Geben Sie bitte einen Wert kleiner oder gleich {0} ein."),
+    min: $.validator.format("Geben Sie bitte einen Wert größer oder gleich {0} ein."),
+    creditcard: "Geben Sie bitte eine gültige Kreditkarten-Nummer ein."
+  });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  <!--End mc_embed_signup-->
+  <!-- NEWSLETTER INTEGRATION END -->
+           
+          </div>
+          <div class="three wide center aligned column">
+              <a href="https://plus.google.com/+TiMMiTransportLeipzig"><img class="socials" src="assets/TiMMi-Transport-Icon-Google-Plus.png" alt="Link zu Google Plus" align="center"></a>
+              <a href="https://www.instagram.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Instagram.png" alt="Link zu Instagram" align="center"></a>
+              <a href="https://www.facebook.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Facebook.png" alt="Link zu Facebook" align="center"></a> 
+              <p></p>
+              <p></p>
+              <p></p>            
+              <p></p>
+              <img src="assets/TiMMi-Transport-Logo2.png" alt="Logo von TiMMi Transport" width="90" align="center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+   
+</div>
+
+</body>
+
+</html>

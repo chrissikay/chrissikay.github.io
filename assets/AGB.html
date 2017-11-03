@@ -1,0 +1,790 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+     <!--Using https://realfavicongenerator.net -->
+     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+     <link rel="manifest" href="manifest.json">
+     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+     <meta name="theme-color" content="#ffffff"> 
+
+    <!-- Site Properties -->
+    <title>AGB</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-faces.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/timmi.css">
+
+    <script src="assets/jquery-3.1.1.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="semantic/dist/components/transition.js"></script>
+    <script src="semantic/dist/components/dropdown.js"></script>
+    <script src="semantic/dist/components/visibility.js"></script>
+    <script>
+        $(document)
+            .ready(function() {
+
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function() {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function() {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item');
+
+            });
+    </script>
+
+<style>
+        /* body {
+          background-color: white !important;
+        } */
+      
+          body {
+            color: rgba(0,0,0,.87);
+          }
+        
+          p {
+             padding: 10px
+          }
+      
+          a {
+            color: rgba(0,0,0,.87) !important;
+          }
+          
+          a:hover {
+            color: #ededed !important;
+          }  
+
+           h1 {
+        font-size: 60px !important;
+        font-weight: normal !important;
+        color: black !important;
+      }
+  
+			h2 {
+      font-weight: normal !important;
+			font-size: 28px !important;
+      text-align: center !important;
+      } 
+
+    	h3 {
+      font-family: GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      font-size: 15px !important;
+      margin-top: 10px !important;
+    }
+      
+          .socials {     /* . is class */
+            width: 40px
+          }
+      
+          #phonenumber  {      /* # is id */
+            background-color: white;
+          }
+      
+          #phonenumber  {
+            width: 165px
+          }
+      
+          .h1and2 {
+            color: white;
+            background-color: white;
+          }
+          
+          .examplestosend {
+            background-color: white;
+            width: 150px
+          }
+      
+          .deliveryoptions {
+            background-color: #f1ae55 !important;
+          }
+      
+          .deliveryoptions {
+            width: 270px
+          }
+      
+          .orangeback {
+            background-color: #f1ae55 !important;
+          }
+      
+          .blueback {
+            background-color: #4a89dc !important;
+          }
+      
+          .whiteback {
+            background-color: white !important;
+          }
+      
+          .timmigradient {
+            background: linear-gradient(90deg, #2aba66 0%, #4a89dc 99%)
+          }
+      
+          .button_gradient {
+      -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:14px;font-family:GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif; padding: 7px 7px 7px 7px; text-decoration:none; display:inline-block;font-weight:bold; color: black;
+       background-color: #2aba66; background-image: -webkit-gradient(linear, left top, left bottom, from(#2aba66), to(#4a89dc));
+       background-image: -webkit-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -moz-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -ms-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -o-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: linear-gradient(to right, #2aba66, #4a89dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2aba66, endColorstr=#4a89dc);
+          }
+      
+          .testimonials {
+            max-width: 150px !important;
+          }
+      
+          #backpic1 {
+            background: url("assets/TiMMi_Transport_Leipzig.jpeg") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #paperripup {
+            background: url("assets/TiMMi-Transport-paperripup3.png") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+      
+          .footernews {
+            text-align: left !important;
+          }
+      
+        </style>
+</head>
+
+
+<!--****************************-->
+<!--***HERE EVERYTHING STARTS***-->
+<!--****************************-->
+
+<body class="pushable">
+
+
+    <!-- <img src="assets/Kontaktoben.jpg" alt="Festnetz 034169769824 WhatsApp 01714167719"> -->
+
+
+    <!-- Following Menu 
+    <div class="ui large top fixed menu transition hidden">
+        <div class="ui container">
+            <a class="active item">Home</a>
+            <a class="item">Community</a>
+            <a class="item">Auftraggeber</a>
+            <a href="Transporteur.html" class="item">Transporteure</a>
+            <a class="item">Partner</a>
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button">Log in</a>
+                </div>
+                <div class="item">
+                    <a class="ui primary button">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu left">
+            <div class="item">
+              <a class="ui logo icon image" href="index.html">
+              <img src="assets/TiMMi_Transport_logo_menu.png">
+              </a>
+              <a href="index.html"><b>   TiMMi Transport</b></a>
+            </div>
+            <div class="item">
+              <div class="header">
+               <a href="index.html"><b>HOME</b></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="header">
+              <a href="community.html"><b>COMMUNITY</b></a>
+              </div>
+              <div class="menu">
+                <a class="item" href="community.html#vision">Vision</a>
+                <a class="item" href="community.html#blog">Blog</a>
+                <a class="item" href="community.html#team">Team</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="header">
+              <a href="auftraggeber.html"><b>AUFTRAGGEBER</b></a>
+              </div>
+              <div class="menu">
+                  <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                  <a class="item" href="auftraggeber.html#explain">Preise</a>
+                  <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                  <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                  <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+              </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                <a href="TRANSPORTEUR.html"><b>TRANSPORTEURE</b></a>
+                </div>
+                <div class="menu">
+                    <a class="item" href="transporteur.html#wie">Transporteur_in werden</a>
+                    <a class="item" href="transporteur.html#explain">Verdienst</a>
+                    <a class="item" href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                <a href="partner.html"><b>PARTNER</b></a>
+                </div>
+                <div class="menu">
+                    <a class="item" href="partner.html#partnerlaeden">Shoppartner</a>
+                    <a class="item" href="partner.html#kurierpartner">Kurierpartner</a>
+                    <a class="item" href="partner.html#technisches">Technische Einbindung</a>
+                    <a class="item" href="partner.html#partnerWerden">Partner werden</a>
+                </div>
+            </div>
+            <a class="item"><font color="#2aba66">EINLOGGEN</a></font>
+            <a class="item"><font color="#4a89dc">ANMELDEN</a></font>
+          </div>
+
+    <!-- Page Contents -->
+    <div class="pusher">
+
+            <section class="ui vertical masthead center aligned segment">
+                    
+                                    <div class="ui large secondary pointing menu">
+                                            <a class="toc item">
+                                              <i class="sidebar icon"></i>
+                                            </a>
+                                            <div class="ui simple item">
+                                                <a href="index.html"> <img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+                                              </div>
+                                            <div class="ui simple item">
+                                              <a href="index.html">HOME</a>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="community.html">COMMUNITY</a>
+                                              <i class="icon dropdown"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="community.html#vision">Vision</a>
+                                                <a class="item"
+                                                   href="community.html#blog">Blog</a>
+                                                <a class="item"
+                                                   href="community.html#team">Team</a>
+                                              </div>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="auftraggeber.html">AUFTRAGGEBER</a>
+                                              <i class="dropdown icon"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                                                <a class="item"
+                                                   href="auftraggeber.html#explain">Preise</a>
+                                                <a class="item"
+                                                   href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                                                <a class="item"
+                                                   href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                                                <!--<a class="item"
+                                                   href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                                                <a class="item"
+                                                   href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+                                              </div>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="Transporteur.html">TRANSPORTEURE</a>
+                                              <i class="icon dropdown"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="transporteur.html#wie">Transporteur_in werden</a>
+                                                <a class="item"
+                                                   href="transporteur.html#explain">Verdienst</a>
+                                                <a class="item"
+                                                   href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                                                <!--<a class="item"
+                                                   href="transporteur.html#referenzen">Referenzen</a>-->
+                                              </div>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="partner.html">PARTNER</a>
+                                              <i class="dropdown icon"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="partner.html#partnerlaeden">Shoppartner</a>
+                                                <a class="item"
+                                                   href="partner.html#kurierpartner">Kurierpartner</a>
+                                                <a class="item"
+                                                   href="partner.html#technisches">Technische Einbindung</a>
+                                                <a class="item"
+                                                   href="partner.html#partnerWerden">Partner werden</a>
+                                                <!--<a class="item"
+                                                   href="#referenzen">Referenzen</a>-->
+                                              </div>
+                                            </div>
+                                            <div class="right item">
+                                              <a class="ui teal basic button">EINLOGGEN</a>
+                                              <a class="ui blue basic button">ANMELDEN</a>
+                                            </div>
+                                          </div>
+
+              <!--Following Menu-->
+ <div class="ui large secondary top fixed pointing menu transition hidden whiteback">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <div class="item">
+        <a href="index.html"><img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+      </div>
+    <div class="ui simple item">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="community.html">COMMUNITY</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="community.html#vision">Vision</a>
+        <a class="item"
+           href="community.html#blog">Blog</a>
+        <a class="item"
+           href="community.html#team">Team</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="auftraggeber.html">AUFTRAGGEBER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+        <a class="item"
+           href="auftraggeber.html#explain">Preise</a>
+        <a class="item"
+           href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+        <a class="item"
+           href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+        <!--<a class="item"
+           href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+        <a class="item"
+           href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="Transporteur.html">TRANSPORTEURE</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="transporteur.html#wie">Transporteur_in werden</a>
+        <a class="item"
+           href="transporteur.html#explain">Verdienst</a>
+        <a class="item"
+           href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+        <!--<a class="item"
+           href="transporteur.html#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="partner.html">PARTNER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="partner.html#partnerlaeden">Shoppartner</a>
+        <a class="item"
+           href="partner.html#kurierpartner">Kurierpartner</a>
+        <a class="item"
+           href="partner.html#technisches">Technische Einbindung</a>
+        <a class="item"
+           href="partner.html#partnerWerden">Partner werden</a>
+        <!--<a class="item"
+           href="#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="right item">
+        <a class="ui teal basic button">EINLOGGEN</a>
+        <a class="ui blue basic button">ANMELDEN</a>
+      </div>
+  </div>
+
+
+  <div>
+    <p></p>
+    <h1>AGB für die Nutzung des TiMMi Transport Dienstleistungsportals</h1>
+    <p></p>
+  </div>
+
+  <div class="ui justified text container">
+    <p>
+      <h2>1. GELTUNGSBEREICH</h2>
+    </p>
+    <p></p>
+    <p>
+        1. TiMMi Transport GmbH betreibt im Internet das Portal timmitransport.de bzw. TiMMi Transport für die Vermittlung von privaten Fahrt- und Transportgelegenheiten sowie sonstigen Dienstleistungen. Entsprechende Verträge über Fahrt- und Transportdienstleistungen bzw. sonstige Dienstleistungen werden jedoch allein unter den Nutzer selbst geschlossen. TiMMi Transport GmbH bietet selbst keine Fahrt- oder Transportdienstleistungen an und ist daher auch kein Vertragspartner der Verträge zwischen den Nutzern. TiMMi Transport GmbH ist auch kein Vertreter der Nutzer und wird auch nicht als deren Vertreter handeln.
+    </p>
+    <p>
+        2. Diese Allgemeinen Geschäftsbedingungen finden in der jeweils aktuellen Fassung unmittelbar Anwendung auf sämtliche Nutzungsbeziehung zwischen TiMMi Transport GmbH und Nutzern des Dienstleistungsportals timmitransport.de bzw. TiMMi Transport. Sie gelten sobald ein Nutzer gleich zu welchem Zweck das Portal aufruft. Darüber hinaus können Leistungen von TiMMi Transport GmbH oder/und des Dienstleistungsportals timmitransport.de bzw. TiMMi Transport von gesonderten Bestimmungen ergänzt werden.  
+    </p>
+    <p>
+      3. Abweichende Geschäftsbedingungen von Nutzern werden ausdrücklich nicht anerkannt, es sei denn, dass TiMMi Transport GmbH der Geltung ausdrücklich schriftlich zugestimmt hat. 
+    </p>
+
+    <p>
+      <h2>2. GEGENSTAND DES NUTZUNGSVERTRAGS</h2>
+    </p>
+    <p></p>
+    <p>
+      1. TiMMi Transport GmbH stellt die technische Internet Plattform / das Portal timmitransport.de bzw. TiMMi Transport zur Verfügung, um mit den jeweils aktuell dort angebotenen Funktionen eine Vermittlung von privaten Fahrt- und Transportdienstleistungen sowie sonstigen Dienstleistungen zwischen demjenigen, der einen Fahrt- oder Transportauftrag ausschreibt (Auftragnehmer) und demjenigen, der Fahr- oder Transportauftrag nutzen möchte (Auftraggeber), zu erreichen.
+    </p>
+    <p>
+      2. Die Nutzer des Portals timmitransport.de bzw. TiMMi Transport haben keinen Anspruch auf die Vorhaltung bestimmter Funktionen, gleich ob es solche Funktionen in der Vergangenheit bereits gab oder nicht. TiMMi Transport GmbH ist als Betreiber des Portals timmitransport.de bzw. TiMMi Transport jederzeit ohne Angabe von Gründen berechtigt, Funktionen des Portals zu ändern, zu streichen oder neue Funktionen hinzuzufügen bzw. die Nutzung von Funktionen mit dem Eintreten sachlicher oder persönlicher Bedingungen zu verbinden, außer zwischen den Parteien ist ausdrücklich etwas anderes schriftlich vereinbart.
+    </p>
+    <p>
+      3. Die Nutzung des Portals ist derzeit grundsätzlich kostenfrei. Für etwaige Zusatzdienste können nach entsprechender Vereinbarung gesonderte Entgelte erhoben werden, was einer ausdrücklichen Vereinbarung zwischen TiMMi Transport GmbH und den Nutzern bedarf. 
+    </p>
+    <p>
+      4. Dieser Nutzungsvertrag ist auf unbestimmte Zeit geschlossen und kann von beiden Seiten mit einer Frist von 2 Wochen gekündigt werden. Die Kündigung soll schriftlich oder per E-Mail erfolgen. Das Recht zur Kündigung aus wichtigem Grund bleibt unberührt.
+    </p>
+    <p>
+      <h2>3. NUTZUNG UND ANMELDUNG</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Zur Nutzung der Vermittlungsleistungen der Plattform timmitransport.de ist eine Anmeldung des Nutzers unter Angabe der notwendigen Stammdaten (Name, Anschrift, Telefonnummer, E-Mail Adresse) erforderlich. Stammdaten dürfen nur von und für unbeschränkt geschäftsfähige natürlichen Personen (Volljährige Personen) oder von bzw. für juristische Personen eingerichtet werden.
+    </p>
+    <p>
+      2. Ein Anspruch auf Zulassung eines Nutzers gegen TiMMi Transport GmbH besteht grundsätzlich nicht. TiMMi Transport GmbH behält sich vor, Nutzer entweder nicht zuzulassen oder die Stammdaten bzw. die Profile zugelassener Nutzer ohne Angabe von Gründen zu löschen. TiMMi Transport GmbH ist auch berechtigt, Nutzer teilweise, ganz oder auch dauerhaft von der Nutzung auszuschließen bzw. Profile von Nutzern zu sperren oder zu löschen. Einem gesperrten oder gelöschten Nutzer ist es untersagt, ein neues Profil anzulegen.
+    </p>
+    <p>
+      3. Alle Daten sind wahrheitsgemäß und vollständig anzugeben und vom Nutzer jederzeit auf einem aktuellen Stand zu halten. Es ist beabsichtigt, dass jeder Nutzer die Möglichkeit hat, seine Stammdaten bzw. sein Profil zu bearbeiten.
+    </p>
+    <p>
+      4. TiMMi Transport GmbH hat keine Möglichkeit, die angegebenen Daten von Nutzern zu prüfen und übernimmt daher keine Verantwortung für die Richtigkeit und/oder Vollständigkeit von Nutzerdaten. Dies ist jeweils vom Nutzer selbst zu überprüfen. Bei diesen Informationen handelt es sich nicht um Inhalte der TiMMi Transport GmbH, die sich diese Informationen und Inhalte auch nicht zu Eigen macht. TiMMi Transport GmbH haftet für die von Dritten eingestellten Informationen und Inhalte nur unter der Voraussetzung, dass sie von einer etwaigen Unrichtigkeit oder einem Missbrauch Kenntnis erlangt hat. Berechtigten Beschwerden geht TiMMi Transport GmbH nach und schafft erforderlichenfalls Abhilfe. Die Nutzer sollen TiMMi Transport GmbH von Unrichtigkeiten oder einem Missbrauch des Portals unverzüglich informieren.
+    </p>
+    <p>
+    <h2>4. NUTZUNGSBEDINGUNGEN</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Die Nutzung der Plattform timmitransport.de bzw. TiMMi Transport darf nur in Übereinstimmung mit gesetzlichen Vorschriften und diesen Allgemeinen Geschäftsbedingungen erfolgen. Dies gilt insbesondere für Inhalt und Art der eingestellten Fahrt- und Transportdienstleistungen sowie sonstigen Dienstleistungen, sowie für deren Art der Erfüllung, Vorliegen persönlicher und sachlicher Voraussetzungen zur Erfüllung, Abgabe und Inhalt von Bewertungen oder Stellungnahmen etc.
+    </p>
+    <p>
+       2. TiMMi Transport GmbH weist darauf hin, dass zur Erbringung von einzelnen Leistungen entsprechende Qualifikationen, Zulassungen, Genehmigungen o.ä. erforderlich sein können. TiMMi Transport GmbH übernimmt im Einzelfall keine Überprüfung des Vorliegens entsprechender Voraussetzungen zur Erbringung der Fahrt- und Transportdienstleistungen bzw. sonstiger Dienstleistungen. Die Nutzer, die solche Fahrt- und Transportdienstleistungen erbringen bzw. in Auftrag geben wollen, sind zur selbstständigen Überprüfung des Vorliegens der erforderlichen gesetzlichen Voraussetzungen (Fahrerlaubnis, Zulassung, notwendige Versicherungen, Genehmigungen usw.) verantwortlich.
+    </p>
+    <p>
+        3. Untersagt sind Tätigkeiten oder Leistungen, die einzeln oder auch in Verbindung mit anderen Tätigkeiten gegen gesetzliche Verbote oder behördliche Anweisungen verstoßen. Insbesondere sind die gesetzlichen Bestimmungen zur Verhinderung von Schwarzarbeit zu beachten. TiMMi Transport GmbH behält sich Kontrollen diesbezügliche vor. Bei Verstößen kann der Nutzer von TiMMi Transport GmbH unverzüglich ausgeschlossen werden.
+    </p>
+    <p>
+        4. Gefährliche Gegenstände und Güter dürfen nicht Gegenstand einer Fahrt- und Transportdienstleistung bzw. sonstigen Dienstleistung sein. Unter gefährlichen Gegenständen und Gütern sind insbesondere explosive Materialien, Sprengstoffe, Gase, entflammbare Materialien und Substanzen, infektiöse und toxische/giftige Substanzen, radioaktive Materialien und andere gefährliche oder umweltschädliche Substanzen zu verstehen. Selbiges gilt für Waffen und Drogen.
+    </p>
+    <p>
+        5. Dem Nutzer ist es untersagt, auf der Dienstleistungsplattform timmitransport.de bzw. TiMMi Transport Werbung für eigene Internetdienste oder Internetdienste von Dritten zu machen. TiMMi Transport GmbH ist jederzeit ohne Angabe von Gründen berechtigt, die Zulassung von Nutzern ganz oder teilweise zu sperren bzw. zu löschen.
+    </p>
+    <p>
+        6. Eine gewerbliche Nutzung des Portals ist nur für angemeldete Transportunternehmen, die eine Unternehmensanmeldung durch die TiMMi Transport GmbH erteilt werden, gestattet. Für alle andere Nutzer ist eine gewerbliche Nutzung des Portals nicht gestattet. Eine gewerbliche Tätigkeit liegt vor, wenn der Nutzer seine Dienstleistungen zu einem wiederkehrenden oder sogar dauernden Bestandteil seiner Beschäftigung macht. Eine erhöhte Häufigkeit wird in der Regel auf die Geschäftsmäßigkeit hindeuten. Die entgeltliche oder geschäftsmäßige Verrichtung von gewerblichem Güterkraftverkehr ohne Genehmigung kann als Ordnungswidrigkeit geahndet werden. Zudem kann für die Einnahmen Steuerpflicht entstehen und der Versicherungsschutz für das Fahrzeug jedenfalls teilweise entfallen. Ebenso ist die gewerbliche Personenbeförderung und Brief/Postbeförderung untersagt. Solche Nutzer werden von TiMMi Transport GmbH unverzüglich ausgeschlossen.
+    </p>
+      
+    <p>
+    <H2>5. VERTRAGSVERHÄLTNIS ZWISCHEN DEN NUTZERN</H2>
+    </p>
+    <p></p>
+    <p>
+      1. TiMMi Transport GmbH vermittelt lediglich zwischen dem Auftraggeber und dem Auftragnehmer und ist nicht Beteiligter des vermittelten privaten Fahrt- oder Transportauftrag oder sonstigen Dienstleistungsauftrages. Die Abwicklung des privaten Fahrt- und Transportdienstleistungen einschließlich etwaiger Auseinandersetzungen in Bezug auf die Erfüllung der wechselseitigen Verpflichtungen aus dem Vertrag zwischen Auftragsnehmer und Auftragsgeber ist nicht Teil der Leistung dieses Nutzungsvertrags zwischen dem Nutzer und TiMMi Transport GmbH. Auseinandersetzungen, die den Auftrag betreffen, sind allein zwischen Auftragnehmer und Auftraggeber zu führen.
+      </p>
+      <p>
+      2. Der Nutzer soll den Inhalt der angebotenen bzw. benötigten Fahrt- und Transportdienstleistungen bzw. sonstigen Dienstleistungen möglichst vollständig und präzise beschreiben. Den Inhalt seiner Informationen, Angebote, Ausschreibungen etc. verfasst der Nutzer selbst. TiMMi Transport GmbH nimmt grundsätzlich keine redaktionellen Aufgaben wahr und korrigiert bzw. redigiert keine Texte des Nutzers. Die eingestellten Informationen sind ausschließlich solche der Nutzer. TiMMi Transport GmbH hat grundsätzlich keine Kenntnis davon und macht sich diese auch nicht zu Eigen.
+      </p>
+      <p>
+      3. Es ist ausschließlich die Aufgabe des Nutzers, für die rechtliche Unbedenklichkeit seiner Informationen zu sorgen. TiMMi Transport GmbH treffen insoweit keine Verpflichtungen. Untersagt ist die Einstellung von Informationsinhalten mit beleidigenden, bedrohlichen, Gewalt verherrlichenden, rassistischen oder sexuell anstößigen Inhalten. Des Weiteren ist die Einstellung von religiösen und politischen Informationsangeboten, die die Gefühle derer verletzen, welche eine abweichende religiöse oder politische Haltung einnehmen, untersagt.
+      </p>
+      <p>
+        4. TiMMi Transport GmbH behält sich das Recht vor, Einträge zu entfernen, die sittenwidrige Inhalte verbreiten oder gegen geltende Gesetze und Rechtsnormen verstoßen.
+      </p>
+    <p>
+     <h2>6. PFLICHTEN DER NUTZER</h2> 
+    </p>
+    <p></p>
+    <p>
+      1. Der Auftragnehmer ist verpflichtet, zur vereinbarten Abfahrtzeit am vereinbarten Ort mit dem vorher festgelegten Fahrzeug zu erscheinen und auch nach Verstreichen der vereinbarten Zeit und ggf. nach entsprechender Kontaktaufnahme mit dem Auftraggeber (per Telefon, E-Mail usw.) eine angemessene Zeit auf diesen zu warten. Der Auftragnehmer hat die angebotenen Fahrt- und Transportdienstleistungen bzw. sonstigen Dienstleistungen wie vereinbart für den Auftragsgeber zu erbringen.
+    </p>
+    <p>
+      2. Der Auftragnehmer ist verpflichtet, den Auftraggeber über jedwede Veränderung zu informieren und dessen Zustimmung zur Veränderung einzuholen.
+    </p>
+    <p>
+      3. Der Auftragnehmer ist verpflichtet, in Übereinstimmungen mit dem geltenden Recht über die notwendigen Zulassungen und Versicherungen für das Fahrzeug zu verfügen und vor der Fahrt die Gültigkeit seiner Versicherungen zu überprüfen, insbesondere auch die erforderlichen Haftpflichtversicherung bei Unfällen. TiMMi Transport GmbH gewährleistet keinerlei Versicherungsschutz und Haftung für etwaige Unfälle oder Beschädigungen während der Fahrt- und Transportdienstleistungen der Nutzer.
+    </p>
+    <p>
+      4. Der Auftragnehmer ist verpflichtet, im Besitz einer gültigen Fahrerlaubnis für das Fahrzeug zu sein.
+    </p>
+    <p>
+      5. Der Auftraggeber ist verpflichtet, pünktlich zum vereinbarten Zeitpunkt am vereinbarten Ort zu erscheinen. Zudem hat der Auftraggeber am vereinbarten Ort auch nach der vereinbarten Zeit und ggf. nach entsprechender Kontaktaufnahme mit dem Auftragnehmer (per Telefon, E-Mail usw.) eine angemessene Zeit auf diesen zu warten. Der Auftraggeber ist verpflichtet, eine etwaig vereinbarte Kostenbeteiligung an den Auftragnehmer entsprechend den wechselseitigen Absprachen zu bezahlen. Im Fall einer Lieferung durch einen gewerblichen Nutzer der Plattform ist der Auftraggeber dazu verpflichtet die Kosten für eine zweite Anfahrt zu tragen, falls er nicht pünktlich zum vereinbarten Zeitpunkt am vereinbarten Ort erschienen ist.
+    </p>
+    <p>
+      <h2>7. PFLICHTEN DER NUTZER GEGENÜBER TiMMi TRANSPORT</h2>
+    </p>
+    <p></p>
+    <p>
+     1. Alle Nutzer verpflichten sich, bei der Nutzung der Webseite das geltende Recht zu beachten. Dies beinhaltet insbesondere das Verbot der Veröffentlichung beleidigender, unwahrer, gewaltverherrlichender, jugendgefährdender, rassistischer oder pornographischer Inhalte, sowie das Verbot der Veröffentlichung von rechtlich geschütztem geistigem Eigentum. Probleme und sonstige Vorkommnisse sind TiMMi Transport GmbH unverzüglich zu melden.
+    </p>
+    <p>
+      <h2 font color="red">8. WIDERRUFSBELEHRUNG</h2>
+    </p>
+    <p></p>
+    <p><b>
+      1. Widerrufsrecht
+      Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.
+    </b></p>
+    <p>
+      Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses
+    </p>
+    <p>
+      Um Ihr Widerrufsrecht auszuüben, müssen Sie uns <b>(TiMMi Transport GmbH, Dittrichring 15, 04109 Leipzig, Festnetz: 034169769824, Mobil: 01714167719, Email: info(at)timmi.io)</b> mittels einer eindeutigen Erklärung (z. B. ein mit der Postversandter Brief, Telefax oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.Zur Wahrung der Widerrufsfrist reicht es aus,dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
+    </p>
+    <p>
+      2. Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.
+    </p>
+    <p>  
+      Haben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen soll, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.
+    </p>
+    <p font color="red"><b>
+      3. Muster-Widerrufsformular
+    </b></p>
+    <p> 
+      Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück. (Sie können dieses Formular verwenden, müssen es aber nicht.)
+    </p>
+    <p>
+        An:
+    </p>
+    <p><b>TiMMi Transport GmbH
+    </p>
+    <p>Dittrichring 15
+    </p> 04109 Leipzig
+    </p>
+    <p>
+        Festnetz: 034169769824
+    </p>
+    <p>
+        Mobilfunk:+ 49 1714167719
+    </p>
+    <p>
+        Email: info(at)timmi.io
+    </b></p>
+      <p>
+        Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)
+        __________________________________________________
+        bestellt am ______________ /erhalten am ______________
+      </p>
+      <p>
+        Name des/der Verbraucher(s) __________________________________________________
+      </p>
+      <p>
+        Anschrift des/der Verbraucher(s) __________________________________________________
+      </p>
+      <p>
+        Datum und Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier)
+      </p>
+      <p> 
+        (*) Unzutreffendes streichen
+      </p>
+      <p>
+        4. Dieses Widerrufsrecht bezieht sich ausschließlich auf das Verhältnis zwischen TiMMi Transport GmbH und den Nutzern und nicht auf das Verhältnis zwischen Auftraggeber und Auftragnehmer. Andere gesetzliche oder vertragliche Widerrufsmöglichkeiten bleiben hiervon unberührt.
+      </p>
+    <p>
+      <h2>9. BEWERTUNGEN</h2> 
+    </p>
+    <p></p>
+    <p>
+      1. Nutzer können Bewertungen über andere Nutzer abgeben, mit denen Sie zusammengearbeitet haben. Die Bewertungen sind nach dem Gebot der Fairness sachlich zu verfassen und dürfen keine gesetzeswidrigen, beleidigenden, schmähenden oder strafrechtlichen Inhalt haben. Bewertungen die hiergegen verstoßen werden nicht veröffentlicht bzw. gelöscht.
+    </p>
+      <p>
+      2. TiMMi Transport GmbH behält sich vor, bei Verstößen eventuell angezeigte rechtliche Schritte gegen den Nutzer einzuleiten. Die Bewertungen stellen immer Äußerungen des Urhebers dar und keine Äußerungen und Einschätzung von TiMMi Transport GmbH. Eine unsachgemäße Bewertung, Eigenbewertungen oder jede andere Form der Beeinflussung des Bewertungssystems ist untersagt.
+    </p>
+    <p>
+      3. TiMMi Transport GmbH ist berechtigt, frei über die Bewertung zu verfügen, sie zu verarbeiten und zu verwenden, insbesondere für weitere Bewertungsdienste, und sie in jeder Form zu veröffentlichen. Der Nutzer erklärt Inhaber oder Berechtigter aller verwendeten Markennamen und sonstigen Schutzrechte zu sein, sowie das Recht zu haben, diese zu verwenden.
+    </p>
+  <p>
+    <h2>10. HAFTUNG UND GEWÄHRLEISTUNG</h2>
+  </p>
+  <p>
+      1. Die Haftung von TiMMi Transport GmbH, gleich aus welchem Rechtsgrund, ist im Rahmen der gesetzlichen Zulässigkeit ausgeschlossen. TiMMi Transport GmbH haftet ausschließlich für vorsätzlich oder grob fahrlässig verursachte Schäden, bei Ansprüchen nach dem Produkthaftungsgesetz und bei der Verletzung vertragswesentlicher Hauptpflichten. Im letzteren Fall ist die Haftung für vertragsuntypische, unvorhersehbare Schäden auf einen Betrag von maximal EUR 500,00 im Einzelfall beschränkt. Eine Haftung von TiMMi Transport GmbH für mittelbare Schäden oder Folgeschäden und für den entgangenen Gewinn ist ausdrücklich ausgeschlossen.
+    </p>
+      <p>
+      2. Diese vorstehend aufgezählten Haftungsbeschränkungen finden keine Anwendung, soweit die Haftung aufgrund zwingender gesetzlicher Regelungen nicht beschränkbar ist, im Falle der Übernahme einer ausdrücklichen Garantie durch TiMMi Transport GmbH und für Schäden aus der Verletzung des Lebens, des Körpers und der Gesundheit.
+    </p>
+    <p>
+      3. Im Falle höherer Gewalt ist die Haftung der TiMMi Transport GmbH ausgeschlossen.
+    </p>
+    <p>
+      4. TiMMi Transport GmbH stellt die Plattform in der jeweils vorhandenen Form und Funktion zur Nutzung bereit. Hinsichtlich der Verfügbarkeit der Plattform wird keine Garantie abgegeben oder Mindestverfügbarkeit zugesichert. Die Verfügbarkeit der Plattform kann aus verschiedenen Gründen ganz oder teilweise eingeschränkt ein. Eine Haftung wegen eingeschränkter Verfügbarkeit der Plattform ist gleich aus welchem Rechtsgrund ausgeschlossen.
+    </p>
+
+  <p>
+      5. Für den Inhalt seiner Informationsinhalte und Bewertungen (Text, Bild, Ton, Gestaltung etc.) und für alle darin enthaltenen Angaben und der sich aus diesen eventuell ergebenden Rechtsfolgen haftet allein der Nutzer bzw. der Urheber selbst. Es handelt sich hierbei um für TiMMi Transport GmbH fremde Angebote. Es ist ausschließlich Aufgabe des Nutzers wettbewerbs-, marken-, urheber- oder namensrechtliche Fragen vor Abgabe seiner Erklärungen zu überprüfen und zu klären. Im Falle der Inanspruchnahme durch Dritte haftet der Nutzer allein und verpflichtet sich, TiMMi Transport GmbH von Ansprüchen, Kosten und Schadensersatzansprüchen Dritter einschließlich der Rechtsverfolgungskosten freizustellen.
+  </p>
+    <p>
+        6. Wird TiMMi Transport GmbH durch eine konkrete und begründete Anzeige auf einen möglicherweise rechtswidrigen Inhalt hingewiesen, wird diese dem Hinweis unverzüglich nachgehen und erforderlichenfalls die Löschung des Eintrags vornehmen oder weitergehende Schritte einleiten.
+  </p>
+  <p>
+      7. TiMMi Transport GmbH bietet selbst keine Fahrt- und Transportdienstleistungen an. Das Portal timmitransport.de bzw. TiMMi Transport ist eine reine Kommunikationsplattform, um potenziellen Auftraggeber und Auftragsnehmer zusammenzubringen. Ein Vertrag über Fahrt- und Transportdienstleistungen besteht allein zwischen den Nutzer des Portals untereinander und nicht mit TiMMi Transport GmbH. Vor diesem Hintergrund wird auch keine Haftung und Gewährleistung von TiMMi Transport GmbH im Zusammenhang mit dem durchgeführten Fahrt- und Transportdienstleistungen bzw. sonstigen Dienstleistungen übernommen.
+  </p>
+    <p>
+    <h2>11. HAFTUNGSVERZICHT BEI UNENTGELTLICHEN UND GEMEINNÜTZIGEN FAHRT- UND TRANSPORTDIENSTLEISTUNGEN BZW. SONSTIGE DIENSTLEISTUNGEN</h2>
+  </p>
+  <p>
+   1. Soweit ein Auftraggeber eine unentgeltliche bzw. gemeinnützige Fahrt- und Transportdienstleistung bzw. sonstige Dienstleistungen in Anspruch nimmt, erklärt dieser bereits jetzt ausdrücklich, dass für den Fall, dass ihm ein Schaden entsteht, dieser auf jeglichen Schadenersatzanspruch gegenüber dem Auftragnehmer verzichtet, und zwar selbst dann, wenn dem Verhalten des Auftragnehmers ein Verschulden zuzuordnen ist. Vorstehender Verzicht gilt nicht für ein vorsätzliches Verhalten des Auftragnehmers. Im Übrigen gilt der Verzicht für jeglichen Grad des Verschuldens wie auch wegen einer etwaigen Gefährdungshaftung.
+  </p>
+  <p>
+  2. Der Verzicht ist insoweit eingeschränkt, als das für den Fall, dass eine Haftpflichtversicherung oder sonstige Versicherung für den Schaden eintritt, dieser nicht gilt, es sein denn, dass der Versicherer den Betrag vom Auftragnehmer zurückfordert oder für den Fall der Geltendmachung zurückfordern würde.
+  </p>
+  <p>
+      <h2>12. DATENSCHUTZ</h2>
+  </p>
+  <p>
+    1. Gemäß § 33 BDSG wird darauf hingewiesen, dass die vom Nutzer im Rahmen der Profierstellung angegebenen Daten wie die E-Mail Adresse, Name, Anschrift und Telefonnummer usw. in elektronischen Dateien gespeichert werden. TiMMi Transport GmbH ist berechtigt, personenbezogene Daten, die der Nutzer im Rahmen der Vertragsbeziehung mitgeteilt hat, zu erheben, zu verarbeiten und zu nutzen soweit dies zur Durchführung des Vertrags erforderlich ist oder TiMMi Transport GmbH hierzu verpflichtet ist. Insbesondere ist TiMMi Transport GmbH bei Zustandekommen einer Fahrt- und Transportdienstleistung zwischen den Nutzern berechtigt, die wechselseitigen personenbezogenen Daten zwischen Auftragsgeber und Auftragnehmer auszutauschen.
+  </p>
+  <p>
+      2. Die gespeicherten Daten sind im Profil des Nutzers stets einsehbar. Im Übrigen erfolgt die Datenverwendung gemäß den gesetzlichen Vorschriften und im Rahmen der gesonderten Datenschutzerklärung.
+    </p>
+    <p>
+      3. Der Nutzer erklärt sein Einverständnis zur Verwendung der Daten auch für andere Dienste, sowie zur Weitergabe der Daten für geschäftliche Zwecke, soweit dies nicht gegen zwingende gesetzliche Vorschriften verstößt und zur Erfüllung der vertraglichen Pflichten erforderlich ist. Diese Einwilligung ist jederzeit widerrufbar.
+    </p>
+    <p>
+      4. Der Nutzer willigt widerruflich ein, dass TiMMi Transport GmbH zur Kontaktaufnahme, für sonstige Mitteilungen und den Versand von Newsettern die E-Mail Adresse des Nutzers verwenden kann. Die Einwilligung kann jederzeit widerrufen werden.
+    </p>
+    <p>
+        <h2>13. SCHLUSSBESTIMMUNGEN</h2>
+    </p>
+      <p>
+          1. Es gilt das Recht der Bundesrepublik Deutschland. Die Anwendung des UN-Kaufrechts ist ausgeschlossen, soweit der Nutzer Verbraucher ist, gilt dies nur, soweit keine zwingenden gesetzlichen Regelungen, insbesondere solche des Verbraucherschutzrechts, hierdurch umgangen werden.
+      </p>
+      <p>
+          2. Soweit der Nutzer Unternehmer im Sinne von § 14 BGB, juristische Person des öffentlichen Rechts oder öffentlich rechtliches Sondervermögen ist, wird als ausschließlicher Gerichtsstand für sämtliche Streitigkeiten Leipzig festgelegt. Als Erfüllungsort für Leistungen aus dem Nutzungsvertrag zwischen TiMMi Transport GmbH und dem Nutzer wird einheitlich Leipzig vereinbart.
+      </p>
+      <p>
+          3. Sollte einzelne Bestimmung dieser Allgemeinen Geschäftsbedingungen unwirksam oder unvollständig sein oder werden, bleiben die übrigen Bestimmungen hiervon unberührt. An Stelle der unwirksamen oder unvollständigen Bestimmung werden die Parteien eine solche vereinbaren, die beide Seiten bei Kenntnis der Unwirksamkeit oder Unvollständigkeit wirtschaftlich vereinbart hätten.
+      </p>
+      <p>
+          4. TiMMi Transport GmbH ist berechtigt, diese Allgemeinen Geschäftsbedingungen jederzeit ohne Angabe von Gründen zu ändern. TiMMi Transport GmbH unterrichtet die Nutzer per E-Mail von der Änderung. Nutzer können der Geltung der geänderten Allgemeinen Geschäftsbedingungen innerhalb von 4 Wochen nach Zugang der Änderungsmitteilung widersprechen.
+      </p>
+
+      <p>
+          5. In diesem Fall hat TiMMi Transport GmbH die Möglichkeit, entweder die Weitergeltung der zum Zeitpunkt des Vertragsschlusses gültigen Allgemeinen Geschäftsbedingungen zu wählen oder das Vertragsverhältnis zu kündigen. Widerspricht der Nutzer nicht innerhalb von 4 Wochen, gelten die geänderten Allgemeinen Geschäftsbedingungen als zwischen den Parteien ab Zeitpunkt der Mitteilung bzw. ab dem angegebenen Zeitpunkt an als vereinbart.
+      </p>
+  <p><b>Stand Oktober 2017</b></p>
+  <p></p>
+  </div>
+
+ 
+
+  <div class="timmigradient">
+      <div class="ui vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable divided equal height stackable grid">
+            <div class="four wide center aligned column">
+              <h4 class="ui header">KONTAKT</h4>
+              <div>
+               <p>Dittrichring 15 | Zi. 209<br>
+                  04109 Leipzig</p>
+               <p>Festnetz: 0341/69769824<br>
+                  Mobil: 0171/4167719<br>
+                  E-Mail: info@timmi.io</p>
+              </div>
+            </div>
+            <div class="three wide center aligned column">
+              <h4 class="ui header">SONSTIGES</h4>
+              <div class="ui link list">
+                <p><a href="haeufige-fragen.html" class="item">FAQ</a><br>
+                <a href="Preisinformation.html" class="item">Preise</a><br>
+                <a href="https://drive.google.com/drive/folders/0B7MIe7ej3uI1Tm1Zc0ZTQXBsTkE?usp=sharing" class="item">Pressematerial</a></p>
+              </div>
+               <h4 class="ui header">RECHTLICHES</h4>
+              <div class="ui link list">
+                <p><a href="AGB.html" class="item">AGB</a><br>
+                <a href="Datenschutz.html" class="item">Datenschutz</a><br>
+                <a href="Impressum.html" class="item">Impressum</a></p>
+              </div>
+            </div>
+            <div class="six wide center aligned column">
+    
+    <!-- NEWSLETTER INTEGRATION BEGIN -->
+    <!-- Begin MailChimp Signup Form -->
+    
+    <div id="mc_embed_signup">
+    <form action="https://timmitransport.us15.list-manage.com/subscribe/post?u=bf47aaeec129c0d21eef5d5f4&amp;id=eed250fcef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+      <h4>SEI TEIL DER BEWEGUNG! WIR INFORMIEREN DICH KURZ &amp; KNAPP ÜBER AKTUELLE EREIGNISSE.</h4>
+    
+    
+    <div class="mc-field-group ui form">
+      
+       <div class="inline field">
+       <label for="mce-EMAIL">E-Mail-Adresse<span class="asterisk">*</span>
+       </label>
+       <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+       </div>
+      
+    </div>
+    
+    <br>
+    <div class="mc-field-group input-group footernews">
+        <div class="ui checkbox"><input type="checkbox" value="2" name="group[3487][2]" id="mce-group[3487]-3487-0"><label for="mce-group[3487]-3487-0"> Community-Newsletter</label></div><br>
+        <div class="ui checkbox"><input type="checkbox" value="4" name="group[3487][4]" id="mce-group[3487]-3487-1"><label for="mce-group[3487]-3487-1"> Partner-Newsletter</label></div><br>
+        <div class="ui checkbox"><input type="checkbox" value="8" name="group[3487][8]" id="mce-group[3487]-3487-2"><label for="mce-group[3487]-3487-2"> Presseverteiler</label></div>
+    </div>
+    <br>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bf47aaeec129c0d21eef5d5f4_eed250fcef" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="ui black button"></div>
+        </div>
+    </form>
+    </div>
+    <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
+     * Translated default messages for the $ validation plugin.
+     * Locale: DE
+     */
+    $.extend($.validator.messages, {
+      required: "Dieses Feld ist ein Pflichtfeld.",
+      maxlength: $.validator.format("Geben Sie bitte maximal {0} Zeichen ein."),
+      minlength: $.validator.format("Geben Sie bitte mindestens {0} Zeichen ein."),
+      rangelength: $.validator.format("Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein."),
+      email: "Geben Sie bitte eine gültige E-Mail Adresse ein.",
+      url: "Geben Sie bitte eine gültige URL ein.",
+      date: "Bitte geben Sie ein gültiges Datum ein.",
+      number: "Geben Sie bitte eine Nummer ein.",
+      digits: "Geben Sie bitte nur Ziffern ein.",
+      equalTo: "Bitte denselben Wert wiederholen.",
+      range: $.validator.format("Geben Sie bitten einen Wert zwischen {0} und {1}."),
+      max: $.validator.format("Geben Sie bitte einen Wert kleiner oder gleich {0} ein."),
+      min: $.validator.format("Geben Sie bitte einen Wert größer oder gleich {0} ein."),
+      creditcard: "Geben Sie bitte eine gültige Kreditkarten-Nummer ein."
+    });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <!--End mc_embed_signup-->
+    <!-- NEWSLETTER INTEGRATION END -->
+             
+            </div>
+            <div class="three wide center aligned column">
+                 <a href="https://www.facebook.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Facebook.png" alt="Link zu Facebook" align="center"></a> 
+                            <a href="https://www.facebook.com/timbestellbot/"><img class="socials" src="assets/TiMMi-Transport-Facebook-Messenger-Icon.png" alt="Link zu Facebook" align="center"></a>
+                            <a href="https://www.instagram.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Instagram.png" alt="Link zu Instagram" align="center"></a>
+                            <a href="https://plus.google.com/+TiMMiTransportLeipzig"><img class="socials" src="assets/TiMMi-Transport-Icon-Google-Plus.png" alt="Link zu Google Plus" align="center"></a>
+                            <p></p>
+                            <p></p>
+                            <p></p>           
+                            <img src="assets/TiMMi-Transport-Logo2.png" alt="Logo von TiMMi Transport" width="90" align="center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

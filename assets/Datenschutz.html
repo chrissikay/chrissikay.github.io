@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+     <!--Using https://realfavicongenerator.net -->
+     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+     <link rel="manifest" href="manifest.json">
+     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+     <meta name="theme-color" content="#ffffff"> 
+
+    <!-- Site Properties -->
+    <title>Datenschutz</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-faces.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/timmi.css">
+
+    <script src="assets/jquery-3.1.1.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="semantic/dist/components/transition.js"></script>
+    <script src="semantic/dist/components/dropdown.js"></script>
+    <script src="semantic/dist/components/visibility.js"></script>
+    <script>
+        $(document)
+            .ready(function() {
+
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function() {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function() {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item');
+
+            });
+    </script>
+
+<style>
+        /* body {
+          background-color: white !important;
+        } */
+      
+          body {
+            color: rgba(0,0,0,.87);
+          }
+        
+          p {
+             padding: 10px
+          }
+      
+          a {
+            color: rgba(0,0,0,.87) !important;
+          }
+          
+          a:hover {
+            color: #ededed !important;
+          }  
+
+           h1 {
+        font-size: 60px !important;
+        font-weight: normal !important;
+        color: black !important;
+      }
+  
+			h2 {
+      font-weight: normal !important;
+			font-size: 28px !important;
+      text-align: center !important;
+      } 
+
+    	h3 {
+      font-family: GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      font-size: 15px !important;
+      margin-top: 10px !important;
+    }
+      
+          .socials {     /* . is class */
+            width: 40px
+          }
+      
+          #phonenumber  {      /* # is id */
+            background-color: white;
+          }
+      
+          #phonenumber  {
+            width: 165px
+          }
+      
+          .h1and2 {
+            color: white;
+            background-color: white;
+          }
+          
+          .examplestosend {
+            background-color: white;
+            width: 150px
+          }
+      
+          .deliveryoptions {
+            background-color: #f1ae55 !important;
+          }
+      
+          .deliveryoptions {
+            width: 270px
+          }
+      
+          .orangeback {
+            background-color: #f1ae55 !important;
+          }
+      
+          .blueback {
+            background-color: #4a89dc !important;
+          }
+      
+          .whiteback {
+            background-color: white !important;
+          }
+      
+          .timmigradient {
+            background: linear-gradient(90deg, #2aba66 0%, #4a89dc 99%)
+          }
+      
+          .button_gradient {
+      -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:14px;font-family:GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif; padding: 7px 7px 7px 7px; text-decoration:none; display:inline-block;font-weight:bold; color: black;
+       background-color: #2aba66; background-image: -webkit-gradient(linear, left top, left bottom, from(#2aba66), to(#4a89dc));
+       background-image: -webkit-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -moz-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -ms-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -o-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: linear-gradient(to right, #2aba66, #4a89dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2aba66, endColorstr=#4a89dc);
+          }
+      
+          .testimonials {
+            max-width: 150px !important;
+          }
+      
+          #backpic1 {
+            background: url("assets/TiMMi_Transport_Leipzig.jpeg") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #paperripup {
+            background: url("assets/TiMMi-Transport-paperripup3.png") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+      
+          .footernews {
+            text-align: left !important;
+          }
+      
+        </style>
+</head>
+
+
+<!--****************************-->
+<!--***HERE EVERYTHING STARTS***-->
+<!--****************************-->
+
+<body class="pushable">
+
+
+    <!-- <img src="assets/Kontaktoben.jpg" alt="Festnetz 034169769824 WhatsApp 01714167719"> -->
+
+
+    <!-- Following Menu 
+    <div class="ui large top fixed menu transition hidden">
+        <div class="ui container">
+            <a class="active item">Home</a>
+            <a class="item">Community</a>
+            <a class="item">Auftraggeber</a>
+            <a href="Transporteur.html" class="item">Transporteure</a>
+            <a class="item">Partner</a>
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button">Log in</a>
+                </div>
+                <div class="item">
+                    <a class="ui primary button">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu left">
+            <div class="item">
+              <a class="ui logo icon image" href="index.html">
+              <img src="assets/TiMMi_Transport_logo_menu.png">
+              </a>
+              <a href="index.html"><b>   TiMMi Transport</b></a>
+            </div>
+            <div class="item">
+              <div class="header">
+               <a href="index.html"><b>HOME</b></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="header">
+              <a href="community.html"><b>COMMUNITY</b></a>
+              </div>
+              <div class="menu">
+                <a class="item" href="community.html#vision">Vision</a>
+                <a class="item" href="community.html#blog">Blog</a>
+                <a class="item" href="community.html#team">Team</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="header">
+              <a href="auftraggeber.html"><b>AUFTRAGGEBER</b></a>
+              </div>
+              <div class="menu">
+                  <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                  <a class="item" href="auftraggeber.html#explain">Preise</a>
+                  <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                  <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                  <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+              </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                <a href="TRANSPORTEUR.html"><b>TRANSPORTEURE</b></a>
+                </div>
+                <div class="menu">
+                    <a class="item" href="transporteur.html#wie">Transporteur_in werden</a>
+                    <a class="item" href="transporteur.html#explain">Verdienst</a>
+                    <a class="item" href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                <a href="partner.html"><b>PARTNER</b></a>
+                </div>
+                <div class="menu">
+                    <a class="item" href="partner.html#partnerlaeden">Shoppartner</a>
+                    <a class="item" href="partner.html#kurierpartner">Kurierpartner</a>
+                    <a class="item" href="partner.html#technisches">Technische Einbindung</a>
+                    <a class="item" href="partner.html#partnerWerden">Partner werden</a>
+                </div>
+            </div>
+            <a class="item"><font color="#2aba66">EINLOGGEN</a></font>
+            <a class="item"><font color="#4a89dc">ANMELDEN</a></font>
+          </div>
+
+    <!-- Page Contents -->
+    <div class="pusher">
+
+            <section class="ui vertical masthead center aligned segment">
+                    
+                                    <div class="ui large secondary pointing menu">
+                                            <a class="toc item">
+                                              <i class="sidebar icon"></i>
+                                            </a>
+                                            <div class="ui simple item">
+                                                <a href="index.html"> <img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+                                              </div>
+                                            <div class="ui simple item">
+                                              <a href="index.html">HOME</a>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="community.html">COMMUNITY</a>
+                                              <i class="icon dropdown"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="community.html#vision">Vision</a>
+                                                <a class="item"
+                                                   href="community.html#blog">Blog</a>
+                                                <a class="item"
+                                                   href="community.html#team">Team</a>
+                                              </div>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="auftraggeber.html">AUFTRAGGEBER</a>
+                                              <i class="dropdown icon"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                                                <a class="item"
+                                                   href="auftraggeber.html#explain">Preise</a>
+                                                <a class="item"
+                                                   href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                                                <a class="item"
+                                                   href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                                                <!--<a class="item"
+                                                   href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                                                <a class="item"
+                                                   href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+                                              </div>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="Transporteur.html">TRANSPORTEURE</a>
+                                              <i class="icon dropdown"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="transporteur.html#wie">Transporteur_in werden</a>
+                                                <a class="item"
+                                                   href="transporteur.html#explain">Verdienst</a>
+                                                <a class="item"
+                                                   href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                                                <!--<a class="item"
+                                                   href="transporteur.html#referenzen">Referenzen</a>-->
+                                              </div>
+                                            </div>
+                                            <div class="ui dropdown simple item">
+                                              <a href="partner.html">PARTNER</a>
+                                              <i class="dropdown icon"></i>
+                                              <div class="menu">
+                                                <a class="item"
+                                                   href="partner.html#partnerlaeden">Shoppartner</a>
+                                                <a class="item"
+                                                   href="partner.html#kurierpartner">Kurierpartner</a>
+                                                <a class="item"
+                                                   href="partner.html#technisches">Technische Einbindung</a>
+                                                <a class="item"
+                                                   href="partner.html#partnerWerden">Partner werden</a>
+                                                <!--<a class="item"
+                                                   href="#referenzen">Referenzen</a>-->
+                                              </div>
+                                            </div>
+                                            <div class="right item">
+                                              <a class="ui teal basic button">EINLOGGEN</a>
+                                              <a class="ui blue basic button">ANMELDEN</a>
+                                            </div>
+                                          </div>
+
+              <!--Following Menu-->
+ <div class="ui large secondary top fixed pointing menu transition hidden whiteback">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <div class="item">
+        <a href="index.html"><img class="ui image" src="assets/TiMMi_Transport_logo_menu.png"></a>
+      </div>
+    <div class="ui simple item">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="community.html">COMMUNITY</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="community.html#vision">Vision</a>
+        <a class="item"
+           href="community.html#blog">Blog</a>
+        <a class="item"
+           href="community.html#team">Team</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="auftraggeber.html">AUFTRAGGEBER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+        <a class="item"
+           href="auftraggeber.html#explain">Preise</a>
+        <a class="item"
+           href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+        <a class="item"
+           href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+        <!--<a class="item"
+           href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+        <a class="item"
+           href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="Transporteur.html">TRANSPORTEURE</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="transporteur.html#wie">Transporteur_in werden</a>
+        <a class="item"
+           href="transporteur.html#explain">Verdienst</a>
+        <a class="item"
+           href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+        <!--<a class="item"
+           href="transporteur.html#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="partner.html">PARTNER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="partner.html#partnerlaeden">Shoppartner</a>
+        <a class="item"
+           href="partner.html#kurierpartner">Kurierpartner</a>
+        <a class="item"
+           href="partner.html#technisches">Technische Einbindung</a>
+        <a class="item"
+           href="partner.html#partnerWerden">Partner werden</a>
+        <!--<a class="item"
+           href="#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="right item">
+        <a class="ui teal basic button">EINLOGGEN</a>
+        <a class="ui blue basic button">ANMELDEN</a>
+      </div>
+  </div>
+
+
+  <div>
+    <p></p>
+    <h1>Datenschutzerklärung</h1>
+    <p></p>
+  </div>
+
+  <div class="ui justified text container">
+    <p>
+      <h2>1. DATENSCHUTZ</h2>
+    </p>
+    <p></p>
+    <p>
+        1. Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zwecke der Erhebung und Verwendung personenbezogener Daten durch den verantwortlichen Anbieter, TiMMi Transport GmbH, Dittrichring 15 in 04109 Leipzig, auf der Webseite timmitransport.de bzw. TiMMi Transport auf. Die rechtlichen Grundlagen des Datenschutzes finden sich im Bundesdatenschutzgesetz (BDSG) und dem Telemediengesetz (TMG).
+    </p>
+    <p>
+        2. TiMMi Transport GmbH nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Ihre personenbezogenen Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung behandelt.  
+    </p>
+    <p>
+      3. Die Nutzung der Webseite timmitransport.de bzw. TiMMi Transport ist in der Regel auch ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (z.B. Name, Anschrift, Telefonnummer oder E-Mail Adressen) erhoben werden, erfolgt dies, wenn Sie einen unserer Dienste in Anspruch nehmen oder sich hierfür registrieren lassen, etwa bei der Vermittlung von Fahr- und Transportaufträgen oder sonstigen Dienstleistungen bzw. um einen Newsletter zu bestellen. In diesem Fall werden diejenigen personenbezogenen Daten abgefragt, die hierfür erforderlich und nötig sind. 
+    </p>
+    <p>
+      4. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+    </p>
+    <p>
+      <h2>2. ZUGRIFFSDATEN / SERVER-LOGFILES</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Der Anbieter bzw. sein Webspace-Provider erheben Daten über jeden Zugriff auf das Angebot (sog. Serverlogfiles). Zu den Zugriffsdaten gehören u.a. Name der abgerufenen Webseite, Datei, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider.
+    </p>
+    <p>
+      2. Der Anbieter verwendet die Protokolldaten nur für statistische Auswertungen zum Zweck des Betriebs, der Sicherheit und der Optimierung des Angebotes. Der Anbieter behält sich jedoch vor, die Protokolldaten nachträglich zu überprüfen, wenn aufgrund konkreter Anhaltspunkte der berechtigte Verdacht einer rechtswidrigen Nutzung besteht.
+    </p>
+    <p>
+      <h2>3. UMGANG MIT PERSONENBEZOGENEN DATEN</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Personenbezogene Daten sind Informationen, mit deren Hilfe eine Person bestimmbar ist, also Angaben, die zurück zu einer Person verfolgt werden können. Dazu gehören der Name, Anschrift, die E-Mail Adresse oder die Telefonnummer. Aber auch Daten über Vorlieben, Hobbies, Mitgliedschaften oder welche Webseiten von jemandem angesehen wurden zählen zu personenbezogenen Daten.
+    </p>
+    <p>
+      2. Personenbezogene Daten werden von dem Anbieter nur dann erhoben, genutzt und weiter gegeben, wenn dies gesetzlich erlaubt ist oder die Nutzer in die Datenerhebung einwilligen.
+    </p>
+    <p>
+    <h2>4. AUSKUNFT, LÖSCHUNG, SPERRUNG</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.
+    </p>
+    <p>
+    <h2>5. COOKIES</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.
+      </p>
+      <p>
+      2. Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.
+      </p>
+      <p>
+      3. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+      </p>
+    <p>
+      <h2>6. KONTAKTFORMULAR</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+    </p>
+    <p>
+      <h2>7. WIDERSPRUCH WERBE-MAILS</h2>
+    </p>
+    <p></p>
+    <p>
+     1. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+    </p>
+    <p>
+      <h2>8. NEWSLETTERDATEN</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Wenn Sie den auf der Webseite angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden sind. Weitere Daten werden nicht erhoben. Diese Daten verwenden wir ausschließlich für den Versand der angeforderten Informationen und geben sie nicht an Dritte weiter.
+    </p>
+    <p>
+      2. Die erteilte Einwilligung zur Speicherung der Daten, der E-Mail-Adresse sowie deren Nutzung zum Versand des Newsletters können Sie jederzeit widerrufen.
+    </p>
+    <p>
+      <h2>9. DATENSCHUTZERKLÄRUNG FÜR DIE NUTZUNG VON FACEBOOK-PLUGINS (LIKE-BUTTON)</h2>
+    </p>
+    <p></p>
+    <p>
+      1. Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, Anbieter Facebook Inc., 1 Hacker Way, Menlo Park, California 94025, USA, integriert. Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem "Like-Button" ("Gefällt mir") auf unserer Seite. Eine Übersicht über die Facebook-Plugins finden Sie hier: <a href="http://developers.facebook.com/docs/plugins/"> http://developers.facebook.com/docs/plugins/</a>.
+    </p>
+      <p>
+      2. Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben.
+    </p>
+    <p>
+      3. Wenn Sie den Facebook "Like-Button" anklicken während Sie in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Facebook unter <a href="http://de-de.facebook.com/policy.php"> http://de-de.facebook.com/policy.php </a>.
+    </p>
+    <p>
+      4. Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook- Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus.
+    </p>
+  <p>
+    <h2>10. DATENSCHUTZERKLÄRUNG FÜR DIE NUTZUNG VON GOOGLE ANALYTICS</h2>
+  </p>
+  <p></p>
+  <p>
+    1. Unsere Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc. 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Google Analytics verwendet sog. "Cookies". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden an einen Server von Google in Deutschland übertragen und dort gespeichert.
+  </p>
+    <p>
+    2. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google innerhalb von Deutschland zuvor gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.
+  </p>
+  <p>
+    3. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="http://tools.google.com/dlpage/gaoptout?hl=de"> http://tools.google.com/dlpage/gaoptout?hl=de </a>.
+  </p>
+  <p>
+    4. Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook- Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus.
+  </p>
+  <p>
+    <h2>11. EINBINDUNG VON DIENSTEN UND INHALTEN DRITTER</h2>
+  </p>
+  <p>
+   1. Es kann vorkommen, dass innerhalb dieses Onlineangebotes Inhalte Dritter, wie zum Beispiel Videos von YouTube, Kartenmaterial von Google-Maps, RSS-Feeds oder Grafiken von anderen Webseiten eingebunden werden. Dies setzt immer voraus, dass die Anbieter dieser Inhalte (nachfolgend bezeichnet als "Dritt-Anbieter") die IP-Adresse der Nutzer wahrnehmen. Denn ohne die IP-Adresse, könnten sie die Inhalte nicht an den Browser des jeweiligen Nutzers senden. Die IP-Adresse ist damit für die Darstellung dieser Inhalte erforderlich. Wir bemühen uns nur solche Inhalte zu verwenden, deren jeweilige Anbieter die IP-Adresse lediglich zur Auslieferung der Inhalte verwenden. Jedoch haben wir keinen Einfluss darauf, falls die Dritt-Anbieter die IP-Adresse z.B. für statistische Zwecke speichern. Soweit dies uns bekannt ist, klären wir die Nutzer darüber auf.
+  </p>
+  <p>
+      <h2>12. WEITERGABE PERSONENBEZOGENER DATEN</h2>
+  </p>
+  <p>
+    1. timmitransport.de bzw. TiMMi Transport nutzt Ihre personenbezogenen Informationen nur wie in dieser Erklärung beschrieben und gibt sie nur an solche Unternehmen weiter, die bei der Erfüllung der mit Ihnen abgeschlossenen Verträge eingeschaltet werden. Ansonsten werden Ihre personenbezogenen Angaben nicht an Dritte weitergegeben, wenn Sie dazu nicht ausdrücklich Ihr Einverständnis gegeben haben oder wir zur Herausgabe verpflichtet sind, beispielsweise aufgrund einer gerichtlichen oder behördlichen Anordnung.
+  </p>
+
+  <p><b>Stand Oktober 2017</b></p>
+  <p></p>
+  </div>
+
+ 
+
+  <div class="timmigradient">
+      <div class="ui vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable divided equal height stackable grid">
+            <div class="four wide center aligned column">
+              <h4 class="ui header">KONTAKT</h4>
+              <div>
+               <p>Dittrichring 15 | Zi. 209<br>
+                  04109 Leipzig</p>
+               <p>Festnetz: 0341/69769824<br>
+                  Mobil: 0171/4167719<br>
+                  E-Mail: info@timmi.io</p>
+              </div>
+            </div>
+            <div class="three wide center aligned column">
+              <h4 class="ui header">SONSTIGES</h4>
+              <div class="ui link list">
+                <p><a href="haeufige-fragen.html" class="item">FAQ</a><br>
+                <a href="Preisinformation.html" class="item">Preise</a><br>
+                <a href="https://drive.google.com/drive/folders/0B7MIe7ej3uI1Tm1Zc0ZTQXBsTkE?usp=sharing" class="item">Pressematerial</a></p>
+              </div>
+               <h4 class="ui header">RECHTLICHES</h4>
+              <div class="ui link list">
+                <p><a href="AGB.html" class="item">AGB</a><br>
+                <a href="Datenschutz.html" class="item">Datenschutz</a><br>
+                <a href="Impressum.html" class="item">Impressum</a></p>
+              </div>
+            </div>
+            <div class="six wide center aligned column">
+    
+    <!-- NEWSLETTER INTEGRATION BEGIN -->
+    <!-- Begin MailChimp Signup Form -->
+    
+    <div id="mc_embed_signup">
+    <form action="https://timmitransport.us15.list-manage.com/subscribe/post?u=bf47aaeec129c0d21eef5d5f4&amp;id=eed250fcef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+      <h4>SEI TEIL DER BEWEGUNG! WIR INFORMIEREN DICH KURZ &amp; KNAPP ÜBER AKTUELLE EREIGNISSE.</h4>
+    
+    
+    <div class="mc-field-group ui form">
+      
+       <div class="inline field">
+       <label for="mce-EMAIL">E-Mail-Adresse<span class="asterisk">*</span>
+       </label>
+       <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+       </div>
+      
+    </div>
+    
+    <br>
+    <div class="mc-field-group input-group footernews">
+        <div class="ui checkbox"><input type="checkbox" value="2" name="group[3487][2]" id="mce-group[3487]-3487-0"><label for="mce-group[3487]-3487-0"> Community-Newsletter</label></div><br>
+        <div class="ui checkbox"><input type="checkbox" value="4" name="group[3487][4]" id="mce-group[3487]-3487-1"><label for="mce-group[3487]-3487-1"> Partner-Newsletter</label></div><br>
+        <div class="ui checkbox"><input type="checkbox" value="8" name="group[3487][8]" id="mce-group[3487]-3487-2"><label for="mce-group[3487]-3487-2"> Presseverteiler</label></div>
+    </div>
+    <br>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bf47aaeec129c0d21eef5d5f4_eed250fcef" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="ui black button"></div>
+        </div>
+    </form>
+    </div>
+    <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
+     * Translated default messages for the $ validation plugin.
+     * Locale: DE
+     */
+    $.extend($.validator.messages, {
+      required: "Dieses Feld ist ein Pflichtfeld.",
+      maxlength: $.validator.format("Geben Sie bitte maximal {0} Zeichen ein."),
+      minlength: $.validator.format("Geben Sie bitte mindestens {0} Zeichen ein."),
+      rangelength: $.validator.format("Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein."),
+      email: "Geben Sie bitte eine gültige E-Mail Adresse ein.",
+      url: "Geben Sie bitte eine gültige URL ein.",
+      date: "Bitte geben Sie ein gültiges Datum ein.",
+      number: "Geben Sie bitte eine Nummer ein.",
+      digits: "Geben Sie bitte nur Ziffern ein.",
+      equalTo: "Bitte denselben Wert wiederholen.",
+      range: $.validator.format("Geben Sie bitten einen Wert zwischen {0} und {1}."),
+      max: $.validator.format("Geben Sie bitte einen Wert kleiner oder gleich {0} ein."),
+      min: $.validator.format("Geben Sie bitte einen Wert größer oder gleich {0} ein."),
+      creditcard: "Geben Sie bitte eine gültige Kreditkarten-Nummer ein."
+    });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <!--End mc_embed_signup-->
+    <!-- NEWSLETTER INTEGRATION END -->
+             
+            </div>
+            <div class="three wide center aligned column">
+                <a href="https://www.facebook.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Facebook.png" alt="Link zu Facebook" align="center"></a> 
+                            <a href="https://www.facebook.com/timbestellbot/"><img class="socials" src="assets/TiMMi-Transport-Facebook-Messenger-Icon.png" alt="Link zu Facebook" align="center"></a>
+                            <a href="https://www.instagram.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Instagram.png" alt="Link zu Instagram" align="center"></a>
+                            <a href="https://plus.google.com/+TiMMiTransportLeipzig"><img class="socials" src="assets/TiMMi-Transport-Icon-Google-Plus.png" alt="Link zu Google Plus" align="center"></a>
+                            <p></p>
+                            <p></p>
+                            <p></p>           
+                            <img src="assets/TiMMi-Transport-Logo2.png" alt="Logo von TiMMi Transport" width="90" align="center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+
+</html>

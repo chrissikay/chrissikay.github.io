@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://semantic-ui.com/examples/homepage.html -->
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8"
+          http-equiv="Content-Type" />
+    <!-- Standard Meta -->
+    <meta content="IE=edge"
+          http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+
+        <!--Using https://realfavicongenerator.net -->
+	 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	 <link rel="manifest" href="manifest.json">
+	 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	 <meta name="theme-color" content="#ffffff">
+
+    <style>
+        /* body {
+          background-color: white !important;
+        } */
+
+          body {
+            color: rgba(0,0,0,.87);
+          }
+
+          p {
+             padding: 10px
+          }
+
+          a {
+            color: rgba(0,0,0,.87) !important;
+          }
+
+          a:hover {
+            color: #ededed !important;
+          }
+
+          .socials {     /* . is class */
+            width: 40px
+          }
+
+          #phonenumber  {      /* # is id */
+            background-color: white;
+          }
+
+          #phonenumber  {
+            width: 165px
+          }
+
+          .h1and2 {
+            color: white;
+            background-color: white;
+          }
+
+          .examplestosend {
+            background-color: white;
+            width: 150px
+          }
+
+          .deliveryoptions {
+            background-color: #f1ae55 !important;
+          }
+
+          .deliveryoptions {
+            width: 270px
+          }
+
+          .orangeback {
+            background-color: #f1ae55 !important;
+          }
+
+          .blueback {
+            background-color: #4a89dc !important;
+          }
+
+          .whiteback {
+            background-color: white !important;
+          }
+
+          .timmigradient {
+            background: linear-gradient(90deg, #2aba66 0%, #4a89dc 99%)
+          }
+
+          .button_gradient {
+      -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:14px;font-family:GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif; padding: 7px 7px 7px 7px; text-decoration:none; display:inline-block;font-weight:bold; color: black;
+       background-color: #2aba66; background-image: -webkit-gradient(linear, left top, left bottom, from(#2aba66), to(#4a89dc));
+       background-image: -webkit-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -moz-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -ms-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -o-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: linear-gradient(to right, #2aba66, #4a89dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2aba66, endColorstr=#4a89dc);
+          }
+
+          .testimonials {
+            max-width: 150px !important;
+          }
+
+          #backpic1 {
+            background: url("assets/TiMMi_Transport_Leipzig.jpeg") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #paperripup {
+            background: url("assets/TiMMi-Transport-paperripup3.png") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          .footernews {
+            text-align: left !important;
+          }
+
+
+
+        </style>
+
+        <style>
+    .rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    }
+
+    .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+    }
+
+    .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+    }
+
+    .rslides div {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+    }
+        </style>
+
+    <!-- Site Properties -->
+    <title>Shop mit TiMMi Lieferung</title>
+    <link href="assets/fonts/font-faces.css"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="semantic/dist/semantic.min.css"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="assets/timmi.css"
+          rel="stylesheet"
+          type="text/css" />
+          <script src="assets/jquery-3.2.1.min.js"></script>
+          <script src="semantic/dist/semantic.min.js"></script>
+          <script src="semantic/dist/components/transition.js"></script>
+          <script src="semantic/dist/components/dropdown.js"></script>
+        <script src="semantic/dist/components/visibility.js"></script>
+        <script src="ResponsiveSlides.js/responsiveslides.min.js"></script>
+
+    <script>$(document) .ready(function() { $('.masthead') .visibility({ once: false, onBottomPassed: function() { $('.fixed.menu').transition('fade in'); }, onBottomPassedReverse: function() { $('.fixed.menu').transition('fade out'); } });
+    $('.ui.sidebar') .sidebar('attach events', '.toc.item'); });</script>
+
+    <script>
+            $(function() {
+              $(".rslides").responsiveSlides({
+                auto: true,             // Boolean: Animate automatically, true or false
+      speed: 500,            // Integer: Speed of the transition, in milliseconds
+      timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+      pager: false,           // Boolean: Show pager, true or false
+      nav: false,             // Boolean: Show navigation, true or false
+      random: false,          // Boolean: Randomize the order of the slides, true or false
+      pause: true,           // Boolean: Pause on hover, true or false
+      pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+      prevText: "Previous",   // String: Text for the "previous" button
+      nextText: "Next",
+              });
+
+      				    // card dimmer
+                  $('.special.cards .image')
+                .dimmer({
+                    on: 'hover'
+                })
+            
+                // hide special cards
+                $('.special.cards').hide();
+            });
+          </script>
+  </head>
+  <!--****************************-->
+  <!--***HERE EVERYTHING STARTS***-->
+  <!--****************************-->
+  <body class="pushable">
+    <!-- Following Menu
+    <div class="ui large top fixed pointing menu transition hidden">
+      <div class="ui container">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="ui simple item">
+          <a href="index.html">HOME</a>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="community.html">COMMUNITY</a>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a class="item"
+               href="community.html#vision">Vision</a>
+            <a class="item"
+               href="community.html#blog">Blog</a>
+            <a class="item"
+               href="community.html#team">Team</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="auftraggeber.html">AUFTRAGGEBER</a>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item"
+               href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+            <a class="item"
+               href="auftraggeber.html#explain">Preise</a>
+            <a class="item"
+               href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+            <a class="item"
+               href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+            <a class="item"
+               href="auftraggeber.html#kanaele">Bestellkanäle</a>
+            <a class="item"
+               href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a href="Transporteur.html">TRANSPORTEURE</a>
+          <i class="icon dropdown"></i>
+          <div class="menu">
+            <a class="item"
+               href="transporteur.html#wie">Transporteur_in werden</a>
+            <a class="item"
+               href="transporteur.html#explain">Verdienst</a>
+            <a class="item"
+               href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+            <a class="item"
+               href="transporteur.html#referenzen">Referenzen</a>
+          </div>
+        </div>
+        <div class="ui dropdown simple item">
+          <a class="active item"
+             href="#">PARTNER</a>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item"
+               href="#partnerlaeden">Shoppartner</a>
+            <a class="item"
+               href="#kurierpartner">Kurierpartner</a>
+            <a class="item"
+               href="#technisches">Technische Einbindung</a>
+            <a class="item"
+               href="#partnerWerden">Partner werden</a>
+            <a class="item"
+               href="#referenzen">Referenzen</a>
+          </div>
+        </div>
+        <div class="right menu">
+          <div class="item">
+            <a class="ui button">EINLOGGEN</a>
+          </div>
+          <div class="item">
+            <a class="ui primary button">ANMELDEN</a>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu left">
+        <div class="item">
+          <a class="ui logo icon image" href="index.html">
+          <img src="assets/logo.png">
+          </a>
+          <a href="index.html"><b>   TiMMi Transport</b></a>
+        </div>
+        <div class="item">
+          <div class="header">
+           <a href="index.html"><b>HOME</b></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="header">
+          <a href="community.html"><b>COMMUNITY</b></a>
+          </div>
+          <div class="menu">
+            <a class="item" href="community.html#vision">Vision</a>
+            <a class="item" href="community.html#blog">Blog</a>
+            <a class="item" href="community.html#team">Team</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="header">
+          <a href="auftraggeber.html"><b>AUFTRAGGEBER</b></a>
+          </div>
+          <div class="menu">
+              <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+              <a class="item" href="auftraggeber.html#explain">Preise</a>
+              <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+              <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+              <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+          </div>
+        </div>
+        <div class="item">
+            <div class="header">
+            <a href="TRANSPORTEUR.html"><b>TRANSPORTEURE</b></a>
+            </div>
+            <div class="menu">
+                <a class="item" href="transporteur.html#wie">Transporteur_in werden</a>
+                <a class="item" href="transporteur.html#explain">Verdienst</a>
+                <a class="item" href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+            </div>
+        </div>
+        <div class="active item">
+            <div class="header">
+            <a href="#"><b>PARTNER</b></a>
+            </div>
+            <div class="menu">
+                <a class="item" href="#partnerlaeden">Shoppartner</a>
+                <a class="item" href="#kurierpartner">Kurierpartner</a>
+                <a class="item" href="#technisches">Technische Einbindung</a>
+                <a class="item" href="#partnerWerden">Partner werden</a>
+            </div>
+        </div>
+        <a class="item"><font color="#2aba66">EINLOGGEN</a></font>
+        <a class="item"><font color="#4a89dc">ANMELDEN</a></font>
+      </div>
+
+
+    <!-- Page Contents -->
+    <div class="pusher">
+
+      <!-- Top Menu -->
+      <section class="ui vertical masthead center aligned segment">
+
+          <div class="ui large secondary pointing menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <div class="item">
+                <a href="index.html"><img class="ui image" src="assets/logo.png"></a>
+              </div>
+            <div class="ui simple item">
+              <a href="index.html">HOME</a>
+            </div>
+            <div class="ui dropdown simple item">
+              <a href="community.html">COMMUNITY</a>
+              <i class="icon dropdown"></i>
+              <div class="menu">
+                <a class="item"
+                   href="community.html#vision">Vision</a>
+                <a class="item"
+                   href="community.html#blog">Blog</a>
+                <a class="item"
+                   href="community.html#team">Team</a>
+              </div>
+            </div>
+            <div class="ui dropdown simple item">
+              <a href="auftraggeber.html">AUFTRAGGEBER</a>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <a class="item"
+                   href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                <a class="item"
+                   href="auftraggeber.html#explain">Preise</a>
+                <a class="item"
+                   href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                <a class="item"
+                   href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                <!--<a class="item"
+                   href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                <a class="item"
+                   href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+              </div>
+            </div>
+            <div class="ui dropdown simple item">
+              <a href="Transporteur.html">TRANSPORTEURE</a>
+              <i class="icon dropdown"></i>
+              <div class="menu">
+                <a class="item"
+                   href="transporteur.html#wie">Transporteur_in werden</a>
+                <a class="item"
+                   href="transporteur.html#explain">Verdienst</a>
+                <a class="item"
+                   href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                <!--<a class="item"
+                   href="transporteur.html#referenzen">Referenzen</a>-->
+              </div>
+            </div>
+            <div class="ui dropdown simple item">
+              <a href="partner.html">PARTNER</a>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <a class="item"
+                   href="partner.html#partnerlaeden">Shoppartner</a>
+                <a class="item"
+                   href="partner.html#kurierpartner">Kurierpartner</a>
+                <a class="item"
+                   href="partner.html#technisches">Technische Einbindung</a>
+                <a class="item"
+                   href="partner.html#partnerWerden">Partner werden</a>
+                <!--<a class="item"
+                   href="#referenzen">Referenzen</a>-->
+              </div>
+            </div>
+            <div class="right item">
+                <a class="ui teal basic button">EINLOGGEN</a>
+                <a class="ui blue basic button">ANMELDEN</a>
+              </div>
+          </div>
+
+        <!--Following Menu-->
+ <div class="ui large secondary top fixed pointing menu transition hidden whiteback">
+    <a class="toc item">
+      <i class="sidebar icon"></i>
+    </a>
+    <div class="item">
+        <a href="index.html"><img class="ui image" src="assets/logo.png"></a>
+      </div>
+    <div class="ui simple item">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="community.html">COMMUNITY</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="community.html#vision">Vision</a>
+        <a class="item"
+           href="community.html#blog">Blog</a>
+        <a class="item"
+           href="community.html#team">Team</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="auftraggeber.html">AUFTRAGGEBER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+        <a class="item"
+           href="auftraggeber.html#explain">Preise</a>
+        <a class="item"
+           href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+        <a class="item"
+           href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+        <!--<a class="item"
+           href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+        <a class="item"
+           href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="Transporteur.html">TRANSPORTEURE</a>
+      <i class="icon dropdown"></i>
+      <div class="menu">
+        <a class="item"
+           href="transporteur.html#wie">Transporteur_in werden</a>
+        <a class="item"
+           href="transporteur.html#explain">Verdienst</a>
+        <a class="item"
+           href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+        <!--<a class="item"
+           href="transporteur.html#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="ui dropdown simple item">
+      <a href="partner.html">PARTNER</a>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"
+           href="partner.html#partnerlaeden">Shoppartner</a>
+        <a class="item"
+           href="partner.html#kurierpartner">Kurierpartner</a>
+        <a class="item"
+           href="partner.html#technisches">Technische Einbindung</a>
+        <a class="item"
+           href="partner.html#partnerWerden">Partner werden</a>
+        <!--<a class="item"
+           href="#referenzen">Referenzen</a>-->
+      </div>
+    </div>
+    <div class="right item">
+        <a class="ui teal basic button">EINLOGGEN</a>
+        <a class="ui blue basic button">ANMELDEN</a>
+      </div>
+  </div>
+
+      <div class="ui center aligned vertical stripe segment blueback">
+          <div class = "ui container">
+            <h1>Die TiMMi Shoppartner</h1>
+            <h2 class="ui inverted header">Shoppen mit gutem Gewissen   <i class="heart icon"></i></h2>
+
+          </div>
+        </div>
+        <p></p>
+
+        <div class="ui search">
+          <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Dein Lieferort...">
+            <i class="search icon"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+
+    </section>
+
+      <section class="ui vertical stripe center aligned segment">
+        <div class="ui container">
+        <h2 align="left">LEBENSNOTWENDIGES</h2>
+        <!--<ul class="rslides">
+        <li>-->
+        
+          <div class="ui one column stackable grid">
+           <div class="center aligned row">
+            <div class="column">
+            <div class="ui special cards mannheim hamburg köln hannover frankfurt berlin münchen stuttgart dortmund essen bremen nürnberg duisburg bielefeld karlsruhe braunschweig halle freiburg erfurt kassel oldenburg wuppertal bonn ingolstadt">
+                <div class="card">
+                    <div class="blurring dimmable image">
+                        <div class="ui dimmer">
+                            <div class="content">
+                                <div class="center">
+                                    <div class="ui inverted header"> MELDE UNS EINEN LADEN, VON <br>DEM DU EINE LIEFERUNG<br> BEKOMMEN MÖCHTEST! </div>
+                                    <div class="ui button">KONTAKT</div>
+                                </div>
+                            </div>
+                        </div>
+                    <img src="assets/TiMMi-Transport-Lieblingsladen.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">WIR SIND NOCH IM AUFBAU..</div>
+                        <div class="description">..und suchen gerade Partner in dieser Kategorie in Deiner Stadt. Melde Dich für unser Newsletter an :) Wir sagen Bescheid, wenn wir soweit sind!<br><br></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+   
+
+        <div class="ui three column stackable grid">
+            <div class="center aligned row">
+              <div class="column">
+              <a href="https://marktschwaermer.de/de">
+              <div class="ui card leipzig dresden">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/TiMMi-Transport-Marktschwaermer.png" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/TiMMi-Transport-Marktschwaermer2.png" />
+                </div></a>
+                <div class="content">
+                  <a href="https://marktschwaermer.de/de">Marktschwärmer
+                  <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Leipzig, Dresden</span>
+                    <p>Hol Dir alles Gute aus Deiner Region. Direkt vom Erzeuger. Zu fairen Preisen für alle.</p>
+                  </div></a>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="column">
+            <a href="http://www.bio-mare.com/">
+            <div class="ui card leipzig">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/jenny.jpg" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/elliot.jpg" />
+              </div></a>
+              <div class="content">
+                <a href="http://boxmanufaktur.eu/produkt/vegane-box/">Whole Food Box
+                <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Leipzig</span>
+                  <p>Die vollwertige vegane Foodbox mit neuen veganen Produkten jeden Monat überraschen.</p>
+                </div></a>
+              </div>
+            </div>
+            </a>
+          </div>
+              <div class="column">
+                <a href="https://einhorn.my">
+                  <div class="ui card leipzig">
+                    <div class="ui slide masked reveal image">
+                      <img alt=""
+                           class="visible content"
+                           src="assets/TiMMi-Transport-einhorn.png" />
+                      <img alt=""
+                           class="hidden content"
+                           src="assets/TiMMi-Transport-einhorn2.png" />
+                    </div>
+                    <div class="content">
+                      <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Einhorn
+                      <div class="meta">
+                          <span class="date"><i class="globe icon"></i>Leipzig</span>
+                        <p>Der größte Spaß, den man CO2-frei haben kann - vegane Kondome CO2-neutral ausgeliefert ;)</p>
+                      </div>
+                    </a>
+                    </div>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </div>
+    <!--</li>
+    <li>-->
+        <div class="ui three column stackable grid">
+            <div class="center aligned row">
+              <div class="column">
+              <a href="http://www.bio-mare.com/">
+              <div class="ui card leipzig">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/TiMMi-Transport-biomare.png" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/TiMMi-Transport-biomare2.png" />
+                </div></a>
+                <div class="content">
+                  <a class href="http://boxmanufaktur.eu/produkt/vegane-box/">Biomare
+                  <div class="meta">
+                      <span class="date"><i class="globe icon"></i>Leipzig</span>
+                    <p>Biomare bietet bio-vegane Geschenkeboxen über Deine Boxmanufaktur an.</p>
+                  </div></a>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://einhorn.my">
+                <div class="ui card leipzig">
+                  <div class="ui slide masked reveal image">
+                    <img alt=""
+                         class="visible content"
+                         src="assets/TiMMi-Transport-leipspeis.png" />
+                    <img alt=""
+                         class="hidden content"
+                         src="assets/TiMMi-Transport-leipspeis2.png" />
+                  </div>
+                  <div class="content">
+                    <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Leipspeis
+                    <div class="meta">
+                        <span class="date"><i class="globe icon"></i>Leipzig</span>
+                      <p>Ölmühle Leipzig und Manufaktur für Bio-Brotaufstriche. Wir kochen weltbewusst.</p>
+                    </div>
+                  </a>
+                  </div>
+                </div>
+              </a>
+              </div>
+              <div class="column">
+                <a href="https://einhorn.my">
+                  <div class="ui card leipzig">
+                    <div class="ui slide masked reveal image">
+                      <img alt=""
+                           class="visible content"
+                           src="assets/TiMMi-Transport-veggietake-Gemuesekisten2.png" />
+                      <img alt=""
+                           class="hidden content"
+                           src="assets/TiMMi-Transport-veggietake-Gemuesekisten.png" />
+                    </div>
+                    <div class="content">
+                      <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Veggietake
+                      <div class="meta">
+                          <span class="date"><i class="globe icon"></i>Leipzig</span>
+                        <p>Frisches Marktgemüse, direkt zu Deiner Haustür, genau WANN Du willst - und CO2-neutral!</p>
+                      </div>
+                    </a>
+                    </div>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </div>
+    <!--</li>
+    <li>-->
+    <h2 align="left">DIENSTLEISTUNGEN</h2>
+
+    <div class="ui one column stackable grid">
+        <div class="center aligned row">
+         <div class="column">
+         <div class="ui special cards dresden mannheim hamburg köln frankfurt berlin münchen stuttgart dortmund essen bremen nürnberg duisburg bielefeld braunschweig halle freiburg erfurt kassel oldenburg wuppertal bonn ingolstadt">
+             <div class="card">
+                 <div class="blurring dimmable image">
+                     <div class="ui dimmer">
+                         <div class="content">
+                             <div class="center">
+                                 <div class="ui inverted header"> MELDE UNS EINEN LADEN, VON <br>DEM DU EINE LIEFERUNG<br> BEKOMMEN MÖCHTEST! </div>
+                                 <div class="ui button">KONTAKT</div>
+                             </div>
+                         </div>
+                     </div>
+                 <img src="assets/TiMMi-Transport-Lieblingsladen.png">
+                 </div>
+                 <div class="content">
+                     <div class="header">WIR SIND NOCH IM AUFBAU..</div>
+                     <div class="description">..und suchen gerade Partner in dieser Kategorie in Deiner Stadt. Melde Dich für unser Newsletter an :) Wir sagen Bescheid, wenn wir soweit sind!<br><br></div>
+                 </div>
+             </div>
+         </div>
+     </div>
+   </div>
+   </div>
+
+        <div class="ui three column stackable grid">
+          <div class="center aligned row">
+            <div class="column">
+              <a href="https://einhorn.my">
+                <div class="ui card leipzig hannover karlsruhe">
+                  <div class="ui slide masked reveal image">
+                    <img alt=""
+                         class="visible content"
+                         src="assets/TiMMi-Transport-Schuhreparatur.png" />
+                    <img alt=""
+                         class="hidden content"
+                         src="assets/Einhorn_Fahrradpaket.png" />
+                  </div>
+                  <div class="content">
+                    <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Schuhreparatur
+                    <div class="meta">
+                        <span class="date"><i class="globe icon"></i>Leipzig, Hannover, Karlsruhe</span>
+                      <p>Probiert TiM der TiMMi BestellBot aus... Er ist nur 2D aber kann trotzdem Schuhe reparieren ;)</p>
+                    </div>
+                  </a>
+                  </div>
+                </div>
+              </a>
+          </div>
+          <div class="column">
+            <a href="https://einhorn.my">
+              <div class="ui card leipzig hannover karlsruhe">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/TiMMi-Transport-Reinigung.png" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/Einhorn_Fahrradpaket.png" />
+                </div>
+                <div class="content">
+                  <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Textilpflege
+                  <div class="meta">
+                      <span class="date"><i class="globe icon"></i>Leipzig, Hannover, Karlsruhe</span>
+                    <p>TiM der TiMMi BestellBot ist stets im Kontakt mit den Kurieren &amp; liebt Expressaufträge!</p>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </a>
+            </div>
+                <div class="column">
+                  <a href="https://einhorn.my">
+                    <div class="ui card leipzig hannover karlsruhe">
+                      <div class="ui slide masked reveal image">
+                        <img alt=""
+                             class="visible content"
+                             src="assets/TiMMi-Transport-Schneiderei.png" />
+                        <img alt=""
+                             class="hidden content"
+                             src="assets/Einhorn_Fahrradpaket.png" />
+                      </div>
+                      <div class="content">
+                        <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Änderungsschneiderei
+                        <div class="meta">
+                            <span class="date"><i class="globe icon"></i>Leipzig, Hannover, Karlsruhe</span>
+                          <p>Spar' Dir die Abholung Deiner fertigen Kleidung. Lass TiM es für Dich holen.</p>
+                        </div>
+                      </a>
+                      </div>
+                    </div>
+                  </a>
+              </div>
+                </div>
+              </div>
+
+<!--<section class="ui vertical stripe segment">-->
+  <h2 align="left">MODE</h2>
+  <!-- <div class="ui container"> -->
+    <!--<div class="ui vertical stripe quote segment">-->
+        <div class="ui one column stackable grid">
+            <div class="center aligned row">
+             <div class="column">
+             <div class="ui special cards karlsruhe hannover dresden mannheim hamburg köln frankfurt berlin münchen stuttgart dortmund essen bremen nürnberg duisburg bielefeld braunschweig halle freiburg erfurt kassel oldenburg wuppertal bonn ingolstadt">
+                 <div class="card">
+                     <div class="blurring dimmable image">
+                         <div class="ui dimmer">
+                             <div class="content">
+                                 <div class="center">
+                                     <div class="ui inverted header"> MELDE UNS EINEN LADEN, VON <br>DEM DU EINE LIEFERUNG<br> BEKOMMEN MÖCHTEST! </div>
+                                     <div class="ui button">KONTAKT</div>
+                                 </div>
+                             </div>
+                         </div>
+                     <img src="assets/TiMMi-Transport-Lieblingsladen.png">
+                     </div>
+                     <div class="content">
+                         <div class="header">WIR SIND NOCH IM AUFBAU..</div>
+                         <div class="description">..und suchen gerade Partner in dieser Kategorie in Deiner Stadt. Melde Dich für unser Newsletter an :) Wir sagen Bescheid, wenn wir soweit sind!<br><br></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+       </div>
+       </div>
+  
+  <div class="ui three column stackable grid">
+      <div class="center aligned row">
+        <div class="column">
+        <a href="http://www.bio-mare.com/">
+        <div class="ui card leipzig">
+          <div class="ui slide masked reveal image">
+            <img alt=""
+                 class="visible content"
+                 src="assets/TiMMi_Transport_Gruenschnabel2.jpg" />
+            <img alt=""
+                 class="hidden content"
+                 src="assets/TiMMi-Transport-Gruenschnabel.png" />
+          </div></a>
+          <div class="content">
+            <a class href="http://boxmanufaktur.eu/produkt/vegane-box/">Grünschnabel
+            <div class="meta">
+                <span class="date"><i class="globe icon"></i>Leipzig</span>
+              <p>Modisch<br>Ökologisch<br>Fair<br><i class="heart icon"></i> </p>
+            </div></a>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="column">
+          <a href="https://einhorn.my">
+            <div class="ui card leipzig">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/TiMMi-Transport-Kunst-Katze.png" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/Einhorn_Fahrradpaket.png" />
+              </div>
+              <div class="content">
+                <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Kunst &amp; Katze
+                <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Leipzig</span>
+                  <p>Alles Fair Trade - Geschenke, Kleidung, Deko - einiges mit Katzenmotiv</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://einhorn.my">
+            <div class="ui card leipzig">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/TiMMi_Transport_Netz-statt-plastik.png" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/Einhorn_Fahrradpaket.png" />
+              </div>
+              <div class="content">
+                <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Netz statt Plastik
+                <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Leipzig</span>
+                  <p>Häkeln für den guten Zweck - Wolle hinschicken, Einkaufsnetz zurück bekommen.</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+
+<h2 align="left">GESCHENKE</h2>
+
+<div class="ui one column stackable grid">
+    <div class="center aligned row">
+     <div class="column">
+     <div class="ui special cards dresden mannheim hamburg köln frankfurt berlin münchen stuttgart dortmund essen bremen nürnberg duisburg bielefeld braunschweig halle freiburg erfurt kassel oldenburg wuppertal bonn ingolstadt">
+         <div class="card">
+             <div class="blurring dimmable image">
+                 <div class="ui dimmer">
+                     <div class="content">
+                         <div class="center">
+                             <div class="ui inverted header"> MELDE UNS EINEN LADEN, VON <br>DEM DU EINE LIEFERUNG<br> BEKOMMEN MÖCHTEST! </div>
+                             <div class="ui button">KONTAKT</div>
+                         </div>
+                     </div>
+                 </div>
+             <img src="assets/TiMMi-Transport-Lieblingsladen.png">
+             </div>
+             <div class="content">
+                 <div class="header">WIR SIND NOCH IM AUFBAU..</div>
+                 <div class="description">..und suchen gerade Partner in dieser Kategorie in Deiner Stadt. Melde Dich für unser Newsletter an :) Wir sagen Bescheid, wenn wir soweit sind!<br><br></div>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+</div>
+
+  <div class="ui three column stackable grid">
+      <div class="center aligned row">
+        <div class="column">
+          <a href="https://einhorn.my">
+            <div class="ui card leipzig hannover karlsruhe">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/TiMMi_Transport_Blumenlieferung_bunt.png" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/TiMMi-Transport-Blumenlieferung.png" />
+              </div>
+              <div class="content">
+                <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Blumen
+                <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Leipzig, Hannover, Karlsruhe</span>
+                  <p>Fair Trade Blumen, faire Lieferung, übers Handy bestellen &amp; einfach eine Freude machen</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </a>
+      </div>
+      <div class="column">
+        <a href="https://einhorn.my">
+          <div class="ui card leipzig">
+            <div class="ui slide masked reveal image">
+              <img alt=""
+                   class="visible content"
+                   src="assets/TiMMi-Transport-Boxmanufaktur.png" />
+              <img alt=""
+                   class="hidden content"
+                   src="assets/Einhorn_Fahrradpaket.png" />
+            </div>
+            <div class="content">
+              <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Deine Boxmanufaktur
+              <div class="meta">
+                  <span class="date"><i class="globe icon"></i>Leipzig</span>
+                <p>Wir boxen bärenstarke Brodukte beherzt in einen Karton. Zum Verschenken und Selbstentdecken. </p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="column">
+          <a href="https://einhorn.my">
+            <div class="ui card dresden leipzig">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/TiMMi-Transport-Stadtspiel.png" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/Einhorn_Fahrradpaket.png" />
+              </div>
+              <div class="content">
+                <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Stadtspiel
+                <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Leipzig, Dresden</span>
+                  <p>Stadt &amp; Schnitzeljagd-Tour wählen, bestellen und los geht das Entdeckungserlebnis</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+
+<h2 align="left">TIERE</h2>
+
+<div class="ui one column stackable grid">
+    <div class="center aligned row">
+     <div class="column">
+     <div class="ui special cards dresden karlsruhe hannover mannheim hamburg köln frankfurt berlin münchen stuttgart dortmund essen bremen nürnberg duisburg bielefeld braunschweig halle freiburg erfurt kassel oldenburg wuppertal bonn ingolstadt">
+         <div class="card">
+             <div class="blurring dimmable image">
+                 <div class="ui dimmer">
+                     <div class="content">
+                         <div class="center">
+                             <div class="ui inverted header"> MELDE UNS EINEN LADEN, VON <br>DEM DU EINE LIEFERUNG<br> BEKOMMEN MÖCHTEST! </div>
+                             <div class="ui button">KONTAKT</div>
+                         </div>
+                     </div>
+                 </div>
+             <img src="assets/TiMMi-Transport-Lieblingsladen.png">
+             </div>
+             <div class="content">
+                 <div class="header">WIR SIND NOCH IM AUFBAU..</div>
+                 <div class="description">..und suchen gerade Partner in dieser Kategorie in Deiner Stadt. Melde Dich für unser Newsletter an :) Wir sagen Bescheid, wenn wir soweit sind!<br><br></div>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+</div>
+
+  <div class="ui two column stackable grid">
+    <div class="center aligned row">
+      <div class="column">
+        <a href="https://einhorn.my">
+          <div class="ui card leipzig">
+            <div class="ui slide masked reveal image">
+              <img alt=""
+                   class="visible content"
+                   src="assets/TiMMi-Transport-Animal-herbs.png" />
+              <img alt=""
+                   class="hidden content"
+                   src="assets/Einhorn_Fahrradpaket.png" />
+            </div>
+            <div class="content">
+              <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Animal Herbs
+              <div class="meta">
+                  <span class="date"><i class="globe icon"></i>Leipzig</span>
+                <p>Das Haustier-Fachgeschäft für Naturheilkräuter und artgerechte Ernährung </p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </a>
+    </div>
+    <div class="column">
+      <a href="https://einhorn.my">
+        <div class="ui card leipzig">
+          <div class="ui slide masked reveal image">
+            <img alt=""
+                 class="visible content"
+                 src="assets/TiMMi-Transport-hund-und-und.png" />
+            <img alt=""
+                 class="hidden content"
+                 src="assets/Einhorn_Fahrradpaket.png" />
+          </div>
+          <div class="content">
+            <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Hund und... und
+            <div class="meta">
+                <span class="date"><i class="globe icon"></i>Leipzig</span>
+              <p>Für Tiere | Für Menschen | Für Dich<br> Eine Geschenkebox für Deinen Vierbeiner!</p>
+            </div>
+          </a>
+          </div>
+        </div>
+      </a>
+      </div>
+      </div>
+    </div>
+
+<h2 align="left">SONSTIGES
+</h2>
+    <div class="ui three column stackable grid">
+        <div class="center aligned row">
+          <div class="column">
+            <a href="https://einhorn.my">
+              <div class="ui card leipzig">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/TiMMi-Transport-Leihla.png" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/Einhorn_Fahrradpaket.png" />
+                </div>
+                <div class="content">
+                  <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Leila
+                  <div class="meta">
+                      <span class="date"><i class="globe icon"></i>Leipzig</span>
+                    <p>- Leihen statt Kaufen -<br> Die Bibliothek der Dinge ermöglicht das Teilen von Gegenständen</p>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div class="column">
+          <a href="https://einhorn.my">
+            <div class="ui card leipzig dresden karlsruhe hannover mannheim hamburg köln frankfurt berlin münchen stuttgart dortmund essen bremen nürnberg duisburg bielefeld braunschweig halle freiburg erfurt kassel oldenburg wuppertal bonn ingolstadt">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/TiMMi-Transport-Lieblingsladen.png" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/Einhorn_Fahrradpaket.png" />
+              </div>
+              <div class="content">
+                <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Dein Lieblingsladen!
+                <div class="meta">
+                    <span class="date"><i class="globe icon"></i>Deutschlandweit</span>
+                  <p>Melde uns einen Laden von denen Du gern auch mal eine Lieferung nach Hause bekommen willst</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div class="column">
+              <a href="https://einhorn.my">
+                <div class="ui card leipzig">
+                  <div class="ui slide masked reveal image">
+                    <img alt=""
+                         class="visible content"
+                         src="assets/TiMMi-Transport-Weltladen2.png" />
+                    <img alt=""
+                         class="hidden content"
+                         src="assets/TiMMi-Transport-Weltladen.png" />
+                  </div>
+                  <div class="content">
+                    <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Der Weltladen
+                    <div class="meta">
+                        <span class="date"><i class="globe icon"></i>Leipzig</span>
+                      <p>Fair gehandelte Kaffee, Tee &amp; mehr aus der ganzen Welt zu Dir nach Hause geliefert</p>
+                    </div>
+                  </a>
+                  </div>
+                </div>
+              </a>
+              </div>
+          </div>
+        </div>
+
+    <!--<div class="ui three column stackable grid">
+        <div class="center aligned row">
+          <div class="column">
+            <a href="https://einhorn.my">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/einhorn1.jpg" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/Einhorn_Fahrradpaket.png" />
+                </div>
+                <div class="content">
+                  <a class="header" href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Einhorn
+                  <div class="meta">
+                    <span class="date">F*CK VEGAN</span>
+                    <p>Der größte Spaß, den man CO2-frei haben kann - CO2-neutral ausgeliefert ;)</p>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div class="column">
+          <a href="https://einhorn.my">
+            <div class="ui card">
+              <div class="ui slide masked reveal image">
+                <img alt=""
+                     class="visible content"
+                     src="assets/einhorn1.jpg" />
+                <img alt=""
+                     class="hidden content"
+                     src="assets/Einhorn_Fahrradpaket.png" />
+              </div>
+              <div class="content">
+                <a class="header" href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Einhorn
+                <div class="meta">
+                  <span class="date">F*CK VEGAN</span>
+                  <p>Der größte Spaß, den man CO2-frei haben kann - CO2-neutral ausgeliefert ;)</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div class="column">
+            <a href="https://einhorn.my">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/einhorn1.jpg" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/Einhorn_Fahrradpaket.png" />
+                </div>
+                <div class="content">
+                  <a class="header" href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Einhorn
+                  <div class="meta">
+                    <span class="date">F*CK VEGAN</span>
+                    <p>Der größte Spaß, den man CO2-frei haben kann - CO2-neutral ausgeliefert ;)</p>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+</div>-->
+</div>
+</section>
+        <!--<div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="seven wide column">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/jenny.jpg" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/elliot.jpg" />
+                </div>
+                <div class="content">
+                  <a class="header"
+                     href="http://www.bio-mare.com/">Biomare</a>
+                  <div class="meta">
+                    <span class="date">Unser Handeln zählt</span>
+                    <p>Wir kooperieren mit Biomare und Deiner Boxmanufaktur, um bio-vegane Geschenkeboxen auszuliefern. Weitere Infos findet man bei
+                    <a href="http://boxmanufaktur.eu/produkt/vegane-box/">Deiner Boxmanufaktur.</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="seven wide right floated column">
+              <div class="ui card">
+                <div class="ui slide masked reveal image">
+                  <img alt=""
+                       class="visible content"
+                       src="assets/einhorn1.jpg" />
+                  <img alt=""
+                       class="hidden content"
+                       src="assets/Einhorn_Fahrradpaket.png" />
+                </div>
+                <div class="content">
+                  <a class="header">Einhorn</a>
+                  <div class="meta">
+                    <span class="date">F*CK VEGAN</span>
+                    <p>Der größte Spaß, den man CO2-frei haben kann - CO2-neutral ausgeliefert ;)</p>
+                    <p>
+                      <a href="https://einhorn.my/kondome-kaufen/leipzig-per-fahrrad/">Zum Einhorn</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+
+      <section class="ui vertical stripe segment">
+        <div class="ui inverted segment">
+          <h2 class="ui inverted header">Neugierde geweckt!? Auch DU kannst einen Partner werden!</h2>
+        </div>
+        <div class="ui text container">
+          <div class="ui items">
+            <div class="item">
+              <div class="image">
+                <a href="https://www.facebook.com/TiMBestellBot/">
+                  <img alt=""
+                       src="assets/tim.jpg" />
+                </a>
+              </div>
+              <div class="content">
+                <a class="header"
+                   href="https://www.facebook.com/TiMBestellBot/">TiM der TiMMi BestellBot</a>
+                <div class="meta">
+                  <span>Description</span>
+                </div>
+                <div class="description">
+                  <p>Für Deinen Laden ohne online Infrastruktur können Lieferanfragen per ChatBot gestellt werden.</p>
+                </div>
+                <div class="extra">
+                <a href="tim-bestellbot.html">
+                  <b>Mehr</b>
+                </a>über TiM der TiMMi BestellBot erfahren.
+                <p></p>
+                <p></p></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <a href="woocommerce-schnittstelle.html">
+                  <img alt=""
+                       src="assets/woo.png" />
+                </a>
+              </div>
+              <div class="content">
+                <a class="header"
+                   href="woocommerce-schnittstelle.html">Onlineshopschnittselle</a>
+                <div class="meta">
+                  <span>Description</span>
+                </div>
+                <div class="description">
+                  <p>Für Deinen bestehenden Onlineshop kannst Du leicht unsere Schnittstelle installieren, die Lieferaufträge automatisch für die TiMMis sichtbar macht.</p>
+                </div>
+                <div class="extra">
+                <a href="woocommerce-schnittstelle.html">
+                  <b>Mehr</b>
+                </a>über die Woocommerce Schnittstelle erfahren.
+                <p></p>
+                <p></p></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img alt=""
+                     src="assets/confucius.jpg" />
+              </div>
+              <div class="content">
+                <a class="header"
+                   href="kontaktformular.html">Custom Einbindung</a>
+                <div class="meta">
+                  <span>Description</span>
+                </div>
+                <div class="description">
+                  <p>Wenn Du eine andere Art technischer Einbindung benötigst, kontaktiere uns, sodass wir eine für Dich passende Lösung zusammen entwickeln können.</p>
+                </div>
+                <div class="extra">
+                <a href="massgeschneidert.html">
+                  <b>Mehr</b>
+                </a>über maßgeschneiderte Einbindungsmöglichkeiten.
+                <p></p>
+                <p></p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--footer-->
+      <div class="timmigradient">
+          <div class="ui vertical footer segment">
+            <div class="ui container">
+              <div class="ui stackable divided equal height stackable grid">
+                <div class="four wide center aligned column">
+                  <h4 class="ui header">KONTAKT</h4>
+                  <div>
+                   <p>Dittrichring 15 | Zi. 209<br>
+                      04109 Leipzig</p>
+                   <p>Festnetz: 0341/69769824<br>
+                      Mobil: 0171/4167719<br>
+                      E-Mail: info@timmi.io</p>
+                  </div>
+                </div>
+                <div class="three wide center aligned column">
+                  <h4 class="ui header">SONSTIGES</h4>
+                  <div class="ui link list">
+                    <p><a href="haeufige-fragen.html" class="item">FAQ</a><br>
+                    <a href="Preisinformation.html" class="item">Preise</a><br>
+                    <a href="https://drive.google.com/drive/folders/0B7MIe7ej3uI1Tm1Zc0ZTQXBsTkE?usp=sharing" class="item">Pressematerial</a></p>
+                  </div>
+                   <h4 class="ui header">RECHTLICHES</h4>
+                  <div class="ui link list">
+                    <p><a href="AGB.html" class="item">AGB</a><br>
+                    <a href="Datenschutz.html" class="item">Datenschutz</a><br>
+                    <a href="Impressum.html" class="item">Impressum</a></p>
+                  </div>
+                </div>
+                <div class="six wide center aligned column">
+
+        <!-- NEWSLETTER INTEGRATION BEGIN -->
+        <!-- Begin MailChimp Signup Form -->
+
+        <div id="mc_embed_signup">
+        <form action="https://timmitransport.us15.list-manage.com/subscribe/post?u=bf47aaeec129c0d21eef5d5f4&amp;id=eed250fcef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          <h4>SEI TEIL DER BEWEGUNG! WIR INFORMIEREN DICH KURZ &amp; KNAPP ÜBER AKTUELLE EREIGNISSE.</h4>
+
+
+        <div class="mc-field-group ui form">
+
+           <div class="inline field">
+           <label for="mce-EMAIL">E-Mail-Adresse<span class="asterisk">*</span>
+           </label>
+           <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+           </div>
+
+        </div>
+
+        <br>
+        <div class="mc-field-group input-group footernews">
+            <div class="ui checkbox"><input type="checkbox" value="2" name="group[3487][2]" id="mce-group[3487]-3487-0"><label for="mce-group[3487]-3487-0"> Community-Newsletter</label></div><br>
+            <div class="ui checkbox"><input type="checkbox" value="4" name="group[3487][4]" id="mce-group[3487]-3487-1"><label for="mce-group[3487]-3487-1"> Partner-Newsletter</label></div><br>
+            <div class="ui checkbox"><input type="checkbox" value="8" name="group[3487][8]" id="mce-group[3487]-3487-2"><label for="mce-group[3487]-3487-2"> Presseverteiler</label></div>
+        </div>
+        <br>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bf47aaeec129c0d21eef5d5f4_eed250fcef" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="ui black button"></div>
+            </div>
+        </form>
+        </div>
+        <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
+         * Translated default messages for the $ validation plugin.
+         * Locale: DE
+         */
+        $.extend($.validator.messages, {
+          required: "Dieses Feld ist ein Pflichtfeld.",
+          maxlength: $.validator.format("Geben Sie bitte maximal {0} Zeichen ein."),
+          minlength: $.validator.format("Geben Sie bitte mindestens {0} Zeichen ein."),
+          rangelength: $.validator.format("Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein."),
+          email: "Geben Sie bitte eine gültige E-Mail Adresse ein.",
+          url: "Geben Sie bitte eine gültige URL ein.",
+          date: "Bitte geben Sie ein gültiges Datum ein.",
+          number: "Geben Sie bitte eine Nummer ein.",
+          digits: "Geben Sie bitte nur Ziffern ein.",
+          equalTo: "Bitte denselben Wert wiederholen.",
+          range: $.validator.format("Geben Sie bitten einen Wert zwischen {0} und {1}."),
+          max: $.validator.format("Geben Sie bitte einen Wert kleiner oder gleich {0} ein."),
+          min: $.validator.format("Geben Sie bitte einen Wert größer oder gleich {0} ein."),
+          creditcard: "Geben Sie bitte eine gültige Kreditkarten-Nummer ein."
+        });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <!--End mc_embed_signup-->
+        <!-- NEWSLETTER INTEGRATION END -->
+
+                </div>
+                <div class="three wide center aligned column">
+                    <a href="https://plus.google.com/+TiMMiTransportLeipzig"><img class="socials" src="assets/TiMMi-Transport-Icon-Google-Plus.png" alt="Link zu Google Plus" align="center"></a>
+                    <a href="https://www.instagram.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Instagram.png" alt="Link zu Instagram" align="center"></a>
+                    <a href="https://www.facebook.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Facebook.png" alt="Link zu Facebook" align="center"></a>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <img src="assets/TiMMi-Transport-Logo2.png" alt="Logo von TiMMi Transport" width="90" align="center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+      var content = [
+        { title: 'Leipzig' },
+        { title: 'Dresden' },
+        { title: 'Karlsruhe' },
+        { title: 'Hannover' },
+        { title: 'Berlin' },
+        { title: 'Mannheim' },
+        { title: 'Frankfurt' },
+        { title: 'Hamburg'},
+        { title: 'Köln'},
+        { title: 'München'},
+        { title: 'Stuttgart'},
+        { title: 'Dortmund'},
+        { title: 'Essen'},
+        { title: 'Bremen'},
+        { title: 'Nürnberg'},
+        { title: 'Duisburg'},
+        { title: 'Bielefeld'},
+        { title: 'Braunschweig'},
+        { title: 'Halle'},
+        { title: 'Freiburg'},
+        { title: 'Erfurt'},
+        { title: 'Kassel'},
+        { title: 'Oldenburg'},
+        { title: 'Wuppertal'},
+        { title: 'Bonn'},
+        { title: 'Ingolstadt'},
+      ];
+
+      $('.ui.search')
+        .search({
+          source: content,
+          onSelect: function (result, response) {
+            var value = result.title;
+            $(`.card`).hide();
+            $(`.card.${value.toLowerCase()}`).show();
+            $(`special.cards.${value.toLowerCase()}`).show();
+          }
+        });
+
+        // $('.ui.search')
+        // .search({
+        //   source: content,
+        //   onSelect: function (result, response) {
+        //     var value = result.title;
+        //     $(`.cards`).hide();
+        //     $(`.cards.${value.toLowerCase()}`).show();
+        //   }
+        // });
+    </script>
+  </body>
+</html>
