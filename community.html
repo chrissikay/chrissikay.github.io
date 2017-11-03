@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://semantic-ui.com/examples/homepage.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!--Using https://realfavicongenerator.net ...still takes forever to load though??? -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff"> 
+
+    <!-- Site Properties -->
+    <title>Community spüren</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-faces.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/timmi.css">
+
+    <script src="assets/jquery-3.1.1.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="ResponsiveSlides.js/responsiveslides.min.js"></script>
+    <script src="semantic/dist/components/transition.js"></script>
+    <script src="semantic/dist/components/dropdown.js"></script>
+    <script src="semantic/dist/components/visibility.js"></script>
+    <script>
+        $(document)
+            .ready(function() {
+
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function() {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function() {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item');
+
+            });
+    </script>
+
+    <!-- Added by CK to get dropdown working-->
+<script>
+        $(document)
+          .ready(function() {
+      
+            // lazy load images
+            $('.image').visibility({
+              type: 'image',
+              transition: 'vertical flip in',
+              duration: 500
+            });
+      
+            // show dropdown on hover
+            $('.main.menu  .ui.dropdown').dropdown({
+              on: 'hover'
+            });
+          })
+        ;
+        </script>
+
+<script>
+        $(function() {
+          $(".rslides").responsiveSlides({
+            auto: true,             // Boolean: Animate automatically, true or false
+  speed: 500,            // Integer: Speed of the transition, in milliseconds
+  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+  pager: false,           // Boolean: Show pager, true or false
+  nav: false,             // Boolean: Show navigation, true or false
+  random: false,          // Boolean: Randomize the order of the slides, true or false
+  pause: true,           // Boolean: Pause on hover, true or false
+  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+  prevText: "Previous",   // String: Text for the "previous" button
+  nextText: "Next",    
+          });
+        });
+      </script>
+
+<!--This link is for the mailchimp newsletter integration in the footer
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">-->
+
+        <style>
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides div {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+        </style>
+<!--End CK addition-->
+
+<!-- start ST addition-->
+<style>
+        body {
+          background-color: white !important;
+        } 
+      
+          body {
+            color: rgba(0,0,0,.87);
+          } 
+        
+          p {
+             padding: 10px
+          }
+      
+          a {
+            color: rgba(0,0,0,.87) !important;
+          }
+          
+          a:hover {
+            color: #ededed !important;
+          }
+
+          h2 {
+            font-weight: normal !important;
+            text-align: center !important;
+          } 
+
+          h3 {
+            font-weight: normal !important;
+            font-size: 24px !important;
+            text-align: center !important;
+          } 
+      
+          .socials {     /* . is class */
+            width: 40px
+          }
+      
+          #phonenumber  {      /* # is id */
+            background-color: white;
+          }
+      
+          #phonenumber  {
+            width: 165px
+          }
+      
+          .h1and2 {
+            color: white;
+            background-color: white;
+          }
+          
+          .examplestosend {
+            background-color: white;
+            width: 150px
+          }
+      
+          .deliveryoptions {
+            background-color: #f1ae55 !important;
+          }
+      
+          .deliveryoptions {
+            width: 270px
+          }
+      
+          .orangeback {
+            background-color: #f1ae55 !important;
+          }  
+      
+          .blueback {
+            background-color: #4a89dc !important;
+          }
+      
+          .whiteback {
+            background-color: white !important;
+          }
+      
+          .timmigradient {
+            background: linear-gradient(90deg, #2aba66 0%, #4a89dc 99%)
+          }
+      
+          .button_gradient {
+      -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:14px;font-family:GothamRoundedLight,'Helvetica Neue',Arial,Helvetica,sans-serif; padding: 7px 7px 7px 7px; text-decoration:none; display:inline-block;font-weight:bold; color: black;
+       background-color: #2aba66; background-image: -webkit-gradient(linear, left top, left bottom, from(#2aba66), to(#4a89dc));
+       background-image: -webkit-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -moz-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -ms-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: -o-linear-gradient(left, #2aba66, #4a89dc);
+       background-image: linear-gradient(to right, #2aba66, #4a89dc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2aba66, endColorstr=#4a89dc);
+          }
+      
+          .testimonials {
+            max-width: 150px !important;
+          }
+      
+          #backpic1 {
+            background: url("assets/biker.jpg") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #backpic2 {
+            background: url("assets/Old_large_images/TiMMi_Transport_Fahrradliebe.jpg") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #transparentback {
+            background: url("assets/TiMMi-Transport-box.png") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #transparentbackdark {
+            background: url("assets/TiMMi-Transport-box-dunkel.png") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+
+          #paperripup {
+            background: url("assets/TiMMi-Transport-paperripup2.png") no-repeat 50% 70% !important;
+            background-size: cover !important;
+          }
+      
+          .footernews {
+            text-align: left !important;
+          }
+
+          .noborder {
+            border-bottom: 0px !important;
+          }
+
+          .nopadding {
+            padding-bottom: 0px !important;
+          }
+
+          .smallpadding {
+            padding-bottom: 70px !important;
+          }
+
+          .teampics {
+            width: 180px !important;
+            
+          }
+      
+      
+      
+        </style>
+
+</head>
+
+
+<!--****************************-->
+<!--***HERE EVERYTHING STARTS***-->
+<!--****************************-->
+
+<body class="pushable">
+
+    <!-- Following Menu
+    <div class="ui large top fixed menu transition hidden">
+            <div class="ui container">
+                    <a class="toc item">
+                            <i class="sidebar icon"></i>
+                          </a>
+                <a href="index.html" class="item">Home</a>
+                <a class="active item">Community</a>
+                <a href= "auftraggeber.html" class="item">Auftraggeber</a>
+                <a href="Transporteur.html" class="item">Transporteure</a>
+                <a href="partner.html" class="item">Partner</a>
+                <div class="right menu">
+                    <div class="item">
+                        <a class="ui button">Log in</a>
+                    </div>
+                    <div class="item">
+                        <a class="ui primary button">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu left">
+            <div class="item">
+              <a class="ui logo icon image" href="index.html">
+              <img src="assets/logo.png">
+              </a>
+              <a href="/"><b>   TiMMi Transport</b></a>
+            </div>
+            <div class="item">
+              <div class="header">
+               <a href="index.html"><b>HOME</b></a>
+              </div>
+            </div>
+            <div class="active item">
+              <div class="header">
+              <a href="#"><b>COMMUNITY</b></a>
+              </div>
+              <div class="menu">
+                <a class="item" href="#vision">Vision</a>
+                <a class="item" href="#blog">Blog</a>
+                <a class="item" href="#team">Team</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="header">
+              <a href="auftraggeber.html"><b>AUFTRAGGEBER</b></a>
+              </div>
+              <div class="menu">
+                  <a class="item" href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                  <a class="item" href="auftraggeber.html#explain">Preise</a>
+                  <a class="item" href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                  <a class="item" href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                  <a class="item" href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+              </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                <a href="TRANSPORTEUR.html"><b>TRANSPORTEURE</b></a>
+                </div>
+                <div class="menu">
+                    <a class="item" href="transporteur.html#wie">Transporteur_in werden</a>
+                    <a class="item" href="transporteur.html#explain">Verdienst</a>
+                    <a class="item" href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                <a href="partner.html"><b>PARTNER</b></a>
+                </div>
+                <div class="menu">
+                    <a class="item" href="partner.html#partnerlaeden">Shoppartner</a>
+                    <a class="item" href="partner.html#kurierpartner">Kurierpartner</a>
+                    <a class="item" href="partner.html#technisches">Technische Einbindung</a>
+                    <a class="item" href="partner.html#partnerWerden">Partner werden</a>
+                </div>
+            </div>
+            <a class="item"><font color="#2aba66">EINLOGGEN</a></font>
+            <a class="item"><font color="#4a89dc">ANMELDEN</a></font>
+          </div>
+        
+
+    <!-- Page Contents -->
+    <div class="pusher">
+
+        <section class="ui vertical masthead center aligned segment whiteback noborder">
+
+                        <div class="ui large secondary pointing menu">
+                          <a class="toc item">
+                            <i class="sidebar icon"></i>
+                          </a>
+                          <div class="item">
+                            <a href="index.html"><img class="ui image" src="assets/logo.png"></a>
+                          </div>
+                        <div class="ui simple item">
+                            <a href="index.html">HOME</a>
+                          </div>
+                          <div class="ui dropdown simple item">
+                            <a class="active simple item" href="community.html">COMMUNITY</a>
+                            <i class="icon dropdown"></i>
+                            <div class="menu">
+                              <a class="item"
+                                 href="#vision">Vision</a>
+                              <a class="item"
+                                 href="#blog">Blog</a>
+                              <a class="item"
+                                 href="#team">Team</a>
+                            </div>
+                          </div>
+                          <div class="ui dropdown simple item">
+                            <a href="auftraggeber.html">AUFTRAGGEBER</a>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                              <a class="item"
+                                 href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                              <a class="item"
+                                 href="auftraggeber.html#explain">Preise</a>
+                              <a class="item"
+                                 href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                              <a class="item"
+                                 href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                              <!--<a class="item"
+                                 href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                              <a class="item"
+                                 href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+                            </div>
+                          </div>
+                          <div class="ui dropdown simple item">
+                            <a href="Transporteur.html">TRANSPORTEURE</a>
+                            <i class="icon dropdown"></i>
+                            <div class="menu">
+                              <a class="item"
+                                 href="transporteur.html#wie">Transporteur_in werden</a>
+                              <a class="item"
+                                 href="transporteur.html#explain">Verdienst</a>
+                              <a class="item"
+                                 href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                              <!--<a class="item"
+                                 href="transporteur.html#referenzen">Referenzen</a>-->
+                            </div>
+                          </div>
+                          <div class="ui dropdown simple item">
+                            <a href="partner.html">PARTNER</a>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                              <a class="item"
+                                 href="partner.html#partnerlaeden">Shoppartner</a>
+                              <a class="item"
+                                 href="partner.html#kurierpartner">Kurierpartner</a>
+                              <a class="item"
+                                 href="partner.html#technisches">Technische Einbindung</a>
+                              <a class="item"
+                                 href="partner.html#partnerWerden">Partner werden</a>
+                              <!--<a class="item"
+                                 href="#referenzen">Referenzen</a>-->
+                            </div>
+                          </div>
+                          <div class="right item">
+                            <a class="ui teal basic button">EINLOGGEN</a>
+                            <a class="ui blue basic button">ANMELDEN</a>
+                          </div>
+                        </div>   
+                        
+                         <!--Following Menu-->
+          <div class="ui large secondary top fixed pointing menu transition hidden whiteback">
+              <a class="toc item">
+                <i class="sidebar icon"></i>
+              </a>
+              <div class="item">
+                  <a href="index.html"><img class="ui image" src="assets/logo.png"></a>
+                </div>
+              <div class="ui simple item">
+                <a href="index.html">HOME</a>
+              </div>
+              <div class="ui dropdown simple item">
+                <a class="active item" href="#">COMMUNITY</a>
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="#vision">Vision</a>
+                  <a class="item"
+                     href="#blog">Blog</a>
+                  <a class="item"
+                     href="#team">Team</a>
+                </div>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="auftraggeber.html">AUFTRAGGEBER</a>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="auftraggeber.html#neuerAuftrag">Auftrag erstellen</a>
+                  <a class="item"
+                     href="auftraggeber.html#explain">Preise</a>
+                  <a class="item"
+                     href="auftraggeber.html#nutzung">TiMMi-Beispiele</a>
+                  <a class="item"
+                     href="auftraggeber.html#vorteile">TiMMi-Vorteile</a>
+                  <!--<a class="item"
+                     href="auftraggeber.html#kanaele">Bestellkanäle</a>-->
+                  <a class="item"
+                     href="auftraggeber.html#hilfsprojekte">Ehrenamtliche Aufträge</a>
+                </div>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="Transporteur.html">TRANSPORTEURE</a>
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="transporteur.html#wie">Transporteur_in werden</a>
+                  <a class="item"
+                     href="transporteur.html#explain">Verdienst</a>
+                  <a class="item"
+                     href="transporteur.html#auftraege">Aktuelle Aufträge</a>
+                  <!--<a class="item"
+                     href="transporteur.html#referenzen">Referenzen</a>-->
+                </div>
+              </div>
+              <div class="ui dropdown simple item">
+                <a href="partner.html">PARTNER</a>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item"
+                     href="partner.html#partnerlaeden">Shoppartner</a>
+                  <a class="item"
+                     href="partner.html#kurierpartner">Kurierpartner</a>
+                  <a class="item"
+                     href="partner.html#technisches">Technische Einbindung</a>
+                  <a class="item"
+                     href="partner.html#partnerWerden">Partner werden</a>
+                  <!--<a class="item"
+                     href="#referenzen">Referenzen</a>-->
+                </div>
+              </div>
+              <div class="right item">
+                  <a class="ui teal basic button">EINLOGGEN</a>
+                  <a class="ui blue basic button">ANMELDEN</a>
+                </div>
+            </div>
+  
+               
+                        <!--<div class="ui middle aligned stackable grid container">-->
+                          <!--<div class="row">-->
+                            <div id="backpic1">
+                               <p></p><p></p><p></p><p></p><p></p><p></p>
+                               <div id="transparentbackdark" float="right">
+                                <h1 class="ui inverted header">Ich bin Weltverbesserer. Weil ich's kann.</h1>
+                                </div>
+                                <!-- <p></p> -->
+                                  <div id="paperripup">
+                                    <div class="ui large vertical stripe segment smallpadding">
+                                      <div class="ui container">
+                                        <h2>VISION</h2>
+                                        <p>Wir wollen eine Gemeinschaft aufbauen, in der die Menschen innerhalb wachsender, vielfältiger aber gleichzeitig anonymer werdender Städte näher zusammenrücken...</p>
+                                        <a class="button_gradient" href="Vision.html">MEHR LESEN</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <!-- <p></p><p></p><p></p></p><p></p><p></p><p></p><p></p> -->
+
+                            </div>
+                          <!--</div>-->
+                         <!--</div>-->
+                         
+        </section>
+
+
+                      
+        <section class="ui grid orangeback">
+            <div id="team" class="ui container">
+                <p></p>
+                <h2>DAS TIMMI TEAM</h2>
+            </div>
+        <div class = "ui container">
+            <div class="ui vertical stripe quote segment">
+                <div class="ui six column stackable grid">
+                    <div class="center aligned row">
+                        <div class="column nopadding">
+                            <img class="teampics" src="assets/TiMMi_Transport_Petros_Petretzikis.png">
+                            <h3>Petros</h3>
+                        </div>
+                        <div class="column nopadding">
+                            <img class="teampics" src="assets/sandra.png">
+                            <h3>Sandra</h3>
+                        </div>
+                        <div class="column nopadding">
+                            <img class="teampics" src="assets/TiMMi_Transport_Alexander_Whillas.png">
+                            <h3>Alex</h3>
+                        </div>
+                        <div class="column nopadding">
+                            <img class="teampics" src="assets/chrissi.png">
+                            <h3>Chrissi</h3>
+                        </div>
+                        <div class="column nopadding">
+                            <img class="teampics" src="assets/TiMMi_Transport_Lazaros_Anastasiou.png">
+                            <h3>Lazaros</h3>
+                        </div>
+                        <div class="column nopadding">
+                            <img class="teampics" src="assets/TiMMi_Transport_Kuriere.png">
+                            <h3><a href= "transporteur/kurierfirmen.html">Die Kuriere</a></h3>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui horizontal divider">
+            <i class="heart icon"></i>
+        </div>
+        <p></p>
+        </section>
+        
+
+        <section class="ui grid">
+            <div class="ui container">
+                <p></p>
+                <h2>BLOG</h2>
+                <p></p>
+
+                <ul class="rslides">
+                        <li>
+                          <div class="ui three column stackable grid">
+                            <div class="center aligned row">
+                              <div class="column">
+                              <a href="blog/liebe-liefern-lassen.html">
+                              <h3>Liebe liefern lassen?</h3>
+                              <div class="ui rounded image" align="center">
+                                  <img src="assets/Old_large_images/TiMMi_Transport_Valentinstag_Blumenlieferung.jpg"></div>
+                              <div class="ui segment">
+                                  <a><img width="20px" src="assets/TiMMi_Transport_Liebe_Blumen_liefern_lassen.png" alt="Herz"></a>
+                                  <p>Brauchen wir eigentlich feierliche Anlässe, um die Liebe zu zelebrieren? Um uns daran zu erinnern, aufmerksam zu sein; Geschenke auszudenken, um uns Höhepunkte zu schaffen?</p>
+                              </div>
+                              </a>
+                            </div>
+                            <div class="column">
+                                <a href="blog/krank.html">
+                                <h3 align="center">Krank fällt's schwer - TiMMi muss her</h3>
+                                <div class="ui rounded image" align="center">
+                                  <img src="assets/Old_large_images/TiMMi_Transport_Krank_im_Bett.jpg"></div>
+                                <div class="ui segment">
+                                    <a><img width="15px" src="assets/TiMMi_Transport_Medikamente_liefern_lassen.png" alt="Medikamentenfläschchen"></a>
+                                    <p>Gliederschmerzen, Nase rennt, Stimme weg, schlappi. Fuß gebrochen, Krücken, Wohnung im 3. Stock. Das letzte, woran wir denken wollen, wenn wir krank sind, ist, Dinge selbst zu tun.</p>
+                                </div>
+                                </a>
+                              </div>
+                              <div class="column">
+                                  <a href="blog/zeit-sparen.html">
+                                  <h3 align="center">Wege abgeben und Zeit sparen</h3>
+                                  <div class="ui rounded image" align="center">
+                                      <img src="assets/Old_large_images/TiMMi_Transport_Zeit_sparen_Blog.jpg"></div>
+                                  <div class="ui segment">
+                                      <a><img width="15px" src="assets/TiMMi_Transport_Zeit_sparen_Erledigung_abgeben.png" alt="Sanduhr"></a>
+                                  <p>Wie Dir TiMMi Zeit schenken kann, damit Du Dich den wichtigeren Dingen des Alltags widmen und ihn stressfreier genießen kannst? Ganz einfach!</p>
+                                  </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+ <!--                       <li>
+                            <div class="ui three column stackable grid">
+                                <div class="center aligned row">
+                                  <div class="column">
+                                  <a href="blog/liebe-liefern-lassen.html">
+                                  <h2>KURIERKULTUR</h2>
+                                  <div class="ui image" align="center">
+                                      <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                  <div class="ui segment">
+                                      <a class="ui green ribbon label">MessSummer 2017</a>
+                                  <p></p>
+                              
+                                  <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                  
+                                  <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                    <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                  
+                                  <p>Und jetzt:...</p>
+                              
+                                  </div>
+                                  </a>
+                                </div>
+                                <div class="column">
+                                    <a href="blog/liebe-liefern-lassen.html">
+                                    <h2 align="center">KONSUMKRITIK</h2>
+                                    <div class="ui image" align="center">
+                                        <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                    <div class="ui segment">
+                                        <a class="ui teal ribbon label">Liebe liefern lassen!?</a>
+                                        
+                                     <p></p>
+                                
+                                    <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                    
+                                    <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                      <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                    
+                                    <p>Und jetzt:...</p>
+                                
+                                    </div>
+                                    </a>
+                                  </div>
+                                  <div class="column">
+                                      <a href="blog/liebe-liefern-lassen.html">
+                                      <h2 align="center">SOZIALER STARTUP</h2>
+                                      <div class="ui image" align="center">
+                                          <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                      <div class="ui segment">
+                                          <a class="ui blue ribbon label">Gründen 101: Jonglieren</a>
+                                      <p></p>
+                                  
+                                      <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                      
+                                      <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                        <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                      
+                                      <p>Und jetzt:...</p>
+                                  
+                                      </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                        </li>
+                        <li>
+                            <div class="ui three column stackable grid">
+                                <div class="center aligned row">
+                                  <div class="column">
+                                  <a href="blog/liebe-liefern-lassen.html">
+                                  <h2>KURIERKULTUR</h2>
+                                  <div class="ui image" align="center">
+                                      <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                  <div class="ui segment">
+                                      <a class="ui green ribbon label">MessSummer 2017</a>
+                                  <p></p>
+                              
+                                  <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                  
+                                  <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                    <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                  
+                                  <p>Und jetzt:...</p>
+                              
+                                  </div>
+                                  </a>
+                                </div>
+                                <div class="column">
+                                    <a href="blog/liebe-liefern-lassen.html">
+                                    <h2 align="center">KONSUMKRITIK</h2>
+                                    <div class="ui image" align="center">
+                                        <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                    <div class="ui segment">
+                                        <a class="ui teal ribbon label">Liebe liefern lassen!?</a>
+                                    <p></p>
+                                
+                                    <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                    
+                                    <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                      <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                    
+                                    <p>Und jetzt:...</p>
+                                
+                                    </div>
+                                    </a>
+                                  </div>
+                                  <div class="column">
+                                      <a href="blog/liebe-liefern-lassen.html">
+                                      <h2 align="center">SOZIALER STARTUP</h2>
+                                      <div class="ui image" align="center">
+                                          <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                      <div class="ui segment">
+                                          <a class="ui blue ribbon label">Geld versus Sinn</a>
+                                      <p></p>
+                                  
+                                      <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                      
+                                      <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                        <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                      
+                                      <p>Und jetzt:...</p>
+                                  
+                                      </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                        </li>
+                        <li>
+                            <div class="ui three column stackable grid">
+                              <div class="center aligned row">
+                                <div class="column">
+                                <a href="blog/liebe-liefern-lassen.html">
+                                <h2>KURIERKULTUR</h2>
+                                <div class="ui image" align="center">
+                                    <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                <div class="ui segment">
+                                    <a class="ui green ribbon label">MessSummer 2017</a>
+                                <p></p>
+                            
+                                <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                
+                                <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                  <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                
+                                <p>Und jetzt:...</p>
+                            
+                                </div>
+                                </a>
+                              </div>
+                              <div class="column">
+                                  <a href="blog/liebe-liefern-lassen.html">
+                                  <h2 align="center">KONSUMKRITIK</h2>
+                                  <div class="ui image" align="center">
+                                      <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                  <div class="ui segment">
+                                      <a class="ui teal ribbon label">Die DIY-Wende</a>
+                                  <p></p>
+                              
+                                  <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                  
+                                  <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                    <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                  
+                                  <p>Und jetzt:...</p>
+                              
+                                  </div>
+                                  </a>
+                                </div>
+                                <div class="column">
+                                    <a href="blog/liebe-liefern-lassen.html">
+                                    <h2 align="center">SOZIALER STARTUP</h2>
+                                    <div class="ui image" align="center">
+                                        <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                    <div class="ui segment">
+                                        <a class="ui blue ribbon label">Gründen 101: Jonglieren</a>
+                                    <p></p>
+                                
+                                    <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                    
+                                    <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                      <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                    
+                                    <p>Und jetzt:...</p>
+                                
+                                    </div>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="ui three column stackable grid">
+                                  <div class="center aligned row">
+                                    <div class="column">
+                                    <a href="blog/liebe-liefern-lassen.html">
+                                    <h2>KURIERKULTUR</h2>
+                                    <div class="ui image" align="center">
+                                        <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                    <div class="ui segment">
+                                        <a class="ui green ribbon label">MessSummer 2017</a>
+                                    <p></p>
+                                
+                                    <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                    
+                                    <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                      <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                    
+                                    <p>Und jetzt:...</p>
+                                
+                                    </div>
+                                    </a>
+                                  </div>
+                                  <div class="column">
+                                      <a href="blog/liebe-liefern-lassen.html">
+                                      <h2 align="center">KONSUMKRITIK</h2>
+                                      <div class="ui image" align="center">
+                                          <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                      <div class="ui segment">
+                                          <a class="ui teal ribbon label">Liebe liefern lassen!?</a>
+                                      <p></p>
+                                  
+                                      <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                      
+                                      <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                        <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                      
+                                      <p>Und jetzt:...</p>
+                                  
+                                      </div>
+                                      </a>
+                                    </div>
+                                    <div class="column">
+                                        <a href="blog/liebe-liefern-lassen.html">
+                                        <h2 align="center">SOZIALER STARTUP</h2>
+                                        <div class="ui image" align="center">
+                                            <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                        <div class="ui segment">
+                                            <a class="ui blue ribbon label">Gründen 101: Jonglieren</a>
+                                        <p></p>
+                                    
+                                        <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                        
+                                        <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                          <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                        
+                                        <p>Und jetzt:...</p>
+                                    
+                                        </div>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </li>
+                          <li>
+                              <div class="ui three column stackable grid">
+                                  <div class="center aligned row">
+                                    <div class="column">
+                                    <a href="blog/liebe-liefern-lassen.html">
+                                    <h2>KURIERKULTUR</h2>
+                                    <div class="ui image" align="center">
+                                        <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                    <div class="ui segment">
+                                        <a class="ui green ribbon label">Mein erster Tag...</a>
+                                    <p></p>
+                                
+                                    <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                    
+                                    <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                      <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                    
+                                    <p>Und jetzt:...</p>
+                                
+                                    </div>
+                                    </a>
+                                  </div>
+                                  <div class="column">
+                                      <a href="blog/liebe-liefern-lassen.html">
+                                      <h2 align="center">KONSUMKRITIK</h2>
+                                      <div class="ui image" align="center">
+                                          <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                      <div class="ui segment">
+                                          <a class="ui teal ribbon label">Die DIY Wende</a>
+                                      <p></p>
+                                  
+                                      <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                      
+                                      <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                        <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                      
+                                      <p>Und jetzt:...</p>
+                                  
+                                      </div>
+                                      </a>
+                                    </div>
+                                    <div class="column">
+                                        <a href="blog/liebe-liefern-lassen.html">
+                                        <h2 align="center">SOZIALER STARTUP</h2>
+                                        <div class="ui image" align="center">
+                                            <img src="assets/TiMMi-Transport-blog-liebe-liefern-lassen.gif"></div>
+                                        <div class="ui segment">
+                                            <a class="ui blue ribbon label">Geld versus Sinn</a>
+                                        <p></p>
+                                    
+                                        <p>Am Anfang: Ehrentag von Juno, Göttin der Ehe und Geburt</p>
+                                        
+                                        <p>Dann: Hinrichtung des heiligen Valentin am 14.2.269 n.Chr., der Pärchen gegen den kaiserlichen Willen vermählte </p>
+                                          <p><b>Soldaten sind ja besser zu gebrauchen als Ehemänner!</b></p>
+                                        
+                                        <p>Und jetzt:...</p>
+                                    
+                                        </div>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </li> -->
+                </ul>
+                
+                <center>
+                  <p></p>
+                  <a class="button_gradient" href="blog.html">ZUR BLOGÜBERSICHT</a>
+                  <p></p>
+                  <p></p>
+                </center>
+                <div class="ui hidden divider"></div>
+                        
+                <!--<div class="ui vertical stripe quote segment">
+                    <div class="ui two column stackable grid">
+                      <div class="center aligned row">
+                        <div class="column">
+                          <h3><a href="blog/liebe-liefern-lassen.html">Liebe liefern lassen</a></h3>
+                          <img src="assets/elliot.jpg">
+                        </div>
+                        <div class="column">
+                          <h3>Alter Blog ;)</h3>
+                          <img src="assets/elliot.jpg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>-->
+            </div>
+        </section>
+
+
+        <section class="ui vertical stripe quote segment blueback">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+                    <div class="column">
+                        <h3>"Love, Peace und Anpacken! "</h3>
+                        <p>Das TiMMi Team</p>
+                    </div>
+                    <div class="column">
+                        <h3>"Ich bin Radler. Weil ich's kann."</h3>
+                        <p>TiMMi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="backpic2">
+            <center class="ui container">
+              <p></p><p></p><p></p><p></p>
+                  <div class="ui vertical stripe quote segment">
+                        <div class="ui two column stackable grid">
+                            <div class="center aligned row">
+                                <div class="column nopadding">
+                                  <h2 style="color: white">Werde Teil der TiMMi Community!</h2>
+                                  <p style="color: white">Jeder kann ein TiMMi sein, auch Du! Egal, ob als Auftraggeber, Transporteur, Unternehmen, Verein oder Profi-Kurier...</p>
+                                  <a class="button_gradient" href="https://www.timmitransport.de/app/signin">ANMELDEN</a>
+                                </div>
+                                <div class="column nopadding">
+                                </div>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                  </div>
+            </center>
+        </section>
+
+        <div class="timmigradient">
+                <div class="ui vertical footer segment">
+                  <div class="ui container">
+                    <div class="ui stackable divided equal height stackable grid">
+                      <div class="four wide center aligned column">
+                        <h4 class="ui header">KONTAKT</h4>
+                        <div>
+                         <p>Dittrichring 15 | Zi. 209<br>
+                            04109 Leipzig</p>
+                         <p>Festnetz: 0341/69769824<br>
+                            Mobil: 0171/4167719<br>
+                            E-Mail: info@timmi.io</p>
+                        </div>
+                      </div>
+                      <div class="three wide center aligned column">
+                        <h4 class="ui header">SONSTIGES</h4>
+                        <div class="ui link list">
+                          <p><a href="haeufige-fragen.html" class="item">FAQ</a><br>
+                          <a href="Preisinformation.html" class="item">Preise</a><br>
+                          <a href="https://drive.google.com/drive/folders/0B7MIe7ej3uI1Tm1Zc0ZTQXBsTkE?usp=sharing" class="item">Pressematerial</a></p>
+                        </div>
+                         <h4 class="ui header">RECHTLICHES</h4>
+                        <div class="ui link list">
+                          <p><a href="AGB.html" class="item">AGB</a><br>
+                          <a href="Datenschutz.html" class="item">Datenschutz</a><br>
+                          <a href="Impressum.html" class="item">Impressum</a></p>
+                        </div>
+                      </div>
+                      <div class="six wide center aligned column">
+              
+              <!-- NEWSLETTER INTEGRATION BEGIN -->
+              <!-- Begin MailChimp Signup Form -->
+              
+              <div id="mc_embed_signup">
+              <form action="https://timmitransport.us15.list-manage.com/subscribe/post?u=bf47aaeec129c0d21eef5d5f4&amp;id=eed250fcef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                  <h4>SEI TEIL DER BEWEGUNG! WIR INFORMIEREN DICH KURZ &amp; KNAPP ÜBER AKTUELLE EREIGNISSE.</h4>
+              
+              
+              <div class="mc-field-group ui form">
+                
+                 <div class="inline field">
+                   <label for="mce-EMAIL">E-Mail-Adresse<span class="asterisk">*</span>
+                 </label>
+                   <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                 </div>
+                
+              </div>
+              
+              <br>
+              <div class="mc-field-group input-group footernews">
+                  <div class="ui checkbox"><input type="checkbox" value="2" name="group[3487][2]" id="mce-group[3487]-3487-0"><label for="mce-group[3487]-3487-0"> Community-Newsletter</label></div><br>
+                  <div class="ui checkbox"><input type="checkbox" value="4" name="group[3487][4]" id="mce-group[3487]-3487-1"><label for="mce-group[3487]-3487-1"> Partner-Newsletter</label></div><br>
+                  <div class="ui checkbox"><input type="checkbox" value="8" name="group[3487][8]" id="mce-group[3487]-3487-2"><label for="mce-group[3487]-3487-2"> Presseverteiler</label></div>
+              </div>
+              <br>
+                  <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bf47aaeec129c0d21eef5d5f4_eed250fcef" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="ui black button"></div>
+                  </div>
+              </form>
+              </div>
+              <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+              <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
+               * Translated default messages for the $ validation plugin.
+               * Locale: DE
+               */
+              $.extend($.validator.messages, {
+                  required: "Dieses Feld ist ein Pflichtfeld.",
+                  maxlength: $.validator.format("Geben Sie bitte maximal {0} Zeichen ein."),
+                  minlength: $.validator.format("Geben Sie bitte mindestens {0} Zeichen ein."),
+                  rangelength: $.validator.format("Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein."),
+                  email: "Geben Sie bitte eine gültige E-Mail Adresse ein.",
+                  url: "Geben Sie bitte eine gültige URL ein.",
+                  date: "Bitte geben Sie ein gültiges Datum ein.",
+                  number: "Geben Sie bitte eine Nummer ein.",
+                  digits: "Geben Sie bitte nur Ziffern ein.",
+                  equalTo: "Bitte denselben Wert wiederholen.",
+                  range: $.validator.format("Geben Sie bitten einen Wert zwischen {0} und {1}."),
+                  max: $.validator.format("Geben Sie bitte einen Wert kleiner oder gleich {0} ein."),
+                  min: $.validator.format("Geben Sie bitte einen Wert größer oder gleich {0} ein."),
+                  creditcard: "Geben Sie bitte eine gültige Kreditkarten-Nummer ein."
+              });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+              <!--End mc_embed_signup-->
+              <!-- NEWSLETTER INTEGRATION END -->
+                       
+                      </div>
+                      <div class="three wide center aligned column">
+                            <a href="https://www.facebook.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Facebook.png" alt="Link zu Facebook" align="center"></a> 
+                            <a href="https://www.facebook.com/timbestellbot/"><img class="socials" src="assets/TiMMi-Transport-Facebook-Messenger-Icon.png" alt="Link zu Facebook" align="center"></a>
+                            <a href="https://www.instagram.com/timmitransport/"><img class="socials" src="assets/TiMMi-Transport-Icon-Instagram.png" alt="Link zu Instagram" align="center"></a>
+                            <a href="https://plus.google.com/+TiMMiTransportLeipzig"><img class="socials" src="assets/TiMMi-Transport-Icon-Google-Plus.png" alt="Link zu Google Plus" align="center"></a>
+                            <p></p>
+                            <p></p>
+                            <p></p>           
+                            <img src="assets/TiMMi-Transport-Logo2.png" alt="Logo von TiMMi Transport" width="90" align="center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
